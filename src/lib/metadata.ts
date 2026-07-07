@@ -1,24 +1,27 @@
 import type { Metadata } from 'next'
 
-export const metadataBaseUrl = new URL('https://grails.app')
+export const metadataBaseUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grails.app')
 
 export const metadataTitle = 'Grails: ENS Manager & Market'
 export const metadataSiteName = 'Grails Market'
 export const metadataDescription = 'Your ENS Market. Find, sell, buy, and manage your ENS names on Grails Market.'
 export const metadataThemeColor = '#ffdfc0'
 
+// Relative URLs: icons resolve against the page origin in the browser, and
+// og/twitter images are absolutized by Next via metadataBase — so every asset
+// is served by this deployment instead of a hardcoded host.
 export const sharedMetadataIcons: Metadata['icons'] = [
   {
     rel: 'icon',
-    url: 'https://grails.app/favicon.ico',
+    url: '/favicon.ico',
   },
   {
     rel: 'apple-touch-icon',
-    url: 'https://grails.app/apple-touch-icon.png',
+    url: '/apple-touch-icon.png',
   },
   {
     rel: 'android-chrome',
-    url: 'https://grails.app/android-chrome-192x192.png',
+    url: '/android-chrome-192x192.png',
   },
 ]
 
@@ -28,11 +31,11 @@ export const sharedMetadataOpenGraph: Metadata['openGraph'] = {
   description: metadataDescription,
   locale: 'en_US',
   siteName: metadataSiteName,
-  url: 'https://grails.app',
+  url: metadataBaseUrl,
   emails: ['contact@ethid.org'],
   images: [
     {
-      url: 'https://grails.app/previews/home.jpeg',
+      url: '/previews/home.jpeg',
     },
   ],
 }
@@ -44,7 +47,7 @@ export const sharedMetadataTwitter: Metadata['twitter'] = {
   description: metadataDescription,
   images: [
     {
-      url: 'https://grails.app/previews/home.jpeg',
+      url: '/previews/home.jpeg',
     },
   ],
 }
@@ -94,7 +97,7 @@ export const sharedMetadata: Metadata = {
     capable: true,
     title: metadataTitle,
     statusBarStyle: 'black-translucent',
-    startupImage: 'https://grails.app/apple-touch-icon.png',
+    startupImage: '/apple-touch-icon.png',
   },
   formatDetection: {
     telephone: false,

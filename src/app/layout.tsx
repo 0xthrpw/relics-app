@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/react'
 import { Sedan_SC, Inter } from 'next/font/google'
 import Providers from './providers'
-import { Production } from './production'
 import SuspendedPostHogPageView from '@/components/posthog/posthog-pageview'
 import PostHogGroupSync from '@/components/posthog/posthog-group-sync'
 import ServiceWorkerRegistration from '@/components/pwa/service-worker-registration'
@@ -45,10 +42,6 @@ export default function RootLayout({
         <ServiceWorkerRegistration />
         <PostHogGroupSync />
         <SuspendedPostHogPageView />
-        <Production>
-          <Analytics />
-          <SpeedInsights />
-        </Production>
       </body>
     </html>
   )

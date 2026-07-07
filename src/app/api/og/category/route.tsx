@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 import { fetchCategories } from '@/api/domains/fetchCategories'
 import { CATEGORY_LABELS } from '@/constants/domains/marketplaceDomains'
 import { API_URL } from '@/constants/api'
+import { APP_URL } from '@/constants'
 
 export async function GET(req: NextRequest) {
   const category = req.url.split('category=')[1] || ''
@@ -124,7 +125,7 @@ export async function GET(req: NextRequest) {
           gap: 10,
         }}
       >
-        <img alt='avatar' width='190' height='60' src='https://grails.app/your-ens-market-logo.svg' />
+        <img alt='avatar' width='190' height='60' src={`${APP_URL}/your-ens-market-logo.svg`} />
       </div>
     </div>,
     {

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { NextRequest, NextResponse } from 'next/server'
-import { APP_ENS_ADDRESS } from '@/constants'
+import { APP_ENS_ADDRESS, APP_URL } from '@/constants'
 import { ENS_NAME_WRAPPER_ADDRESS } from '@/constants/web3/contracts'
 import { labelhash, namehash, isAddress } from 'viem'
 import { formatUnits } from 'viem'
@@ -22,9 +22,9 @@ const WRAPPED_DOMAIN_IMAGE_URL = `${ENS_METADATA_URL}/mainnet/${ENS_NAME_WRAPPER
 const UNWRAPPED_DOMAIN_IMAGE_URL = `${ENS_METADATA_URL}/mainnet/${APP_ENS_ADDRESS}`
 
 const SOURCE_LOGO_URLS: Record<string, string> = {
-  opensea: 'https://grails.app/logos/opensea.svg',
-  grails: 'https://grails.app/logo.svg',
-  vision: 'https://grails.app/logos/ensvision.svg',
+  opensea: `${APP_URL}/logos/opensea.svg`,
+  grails: `${APP_URL}/logo.svg`,
+  vision: `${APP_URL}/logos/ensvision.svg`,
 }
 
 const formatPrice = (priceWei: string, currencyAddress: string): string => {
@@ -221,7 +221,7 @@ export async function GET(req: NextRequest) {
       if (categories.length !== 1) return {}
       const entries = await Promise.all(
         categories.map(async (category) => {
-          const dataUri = await fetchImageAsDataUri(`https://api.grails.app/api/v1/clubs/${category}/avatar`)
+          const dataUri = await fetchImageAsDataUri(`${API_URL}/clubs/${category}/avatar`)
           return [category, dataUri || ''] as const
         })
       )
@@ -426,7 +426,7 @@ export async function GET(req: NextRequest) {
             {`grails.app/${beautifyName(name)}`}
           </div>
           <img
-            src='https://grails.app/your-ens-market-logo.svg'
+            src={`${APP_URL}/your-ens-market-logo.svg`}
             alt='Grails'
             width={380}
             height={116}

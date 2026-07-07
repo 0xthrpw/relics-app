@@ -2,7 +2,7 @@ import { ENS_METADATA_URL } from './ens'
 
 export const APP_NAME = 'Grails Market'
 export const APP_DESCRIPTION = 'Find your next Grail on the Grails ENS Market'
-export const APP_URL = 'https://grails.app'
+export const APP_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://grails.app'
 export const APP_ICON = '/logo.svg'
 export const APP_LOGO = '/logo-w-text.svg'
 export const APP_FAVICON = 'src/app/favicon.ico'
