@@ -12,7 +12,10 @@ WORKDIR /app
 # oven/bun image runs fine on the same debian base.
 COPY --from=oven/bun:1 /usr/local/bin/bun /usr/local/bin/bun
 
+# vendor/ holds the locally-built ethereum-identity-kit tarball (file: dep) —
+# it must exist before install, not just at the `COPY . .` layer.
 COPY package.json bun.lockb ./
+COPY vendor ./vendor
 RUN bun install --frozen-lockfile
 
 COPY . .
