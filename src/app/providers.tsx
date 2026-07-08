@@ -5,7 +5,8 @@ import { WagmiProvider, type State } from 'wagmi'
 import { Provider as ReduxProvider } from 'react-redux'
 import { darkTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { TransactionModal, TransactionProvider } from 'ethereum-identity-kit'
+import { setIdentityKitApiUrls, TransactionModal, TransactionProvider } from 'ethereum-identity-kit'
+import { setIdentityKitApiUrls as setIdentityKitUtilsApiUrls } from 'ethereum-identity-kit/utils'
 import store from '@/state'
 import Navigation from '@/components/navigation'
 import { DAY_IN_SECONDS, ONE_MINUTE } from '@/constants/time'
@@ -20,6 +21,20 @@ import PostHogIdentify from '@/components/posthog/posthog-identify'
 import PostHogProfileProperties from '@/components/posthog/posthog-profile-properties'
 import ChatSidebar from '@/components/chat'
 // import InfoBar from '@/components/ui/infoBar'
+
+// Point the kit at our self-hosted backends (EFP + relics-flavored grails
+// API). The env reads must live here in app source — Next only inlines
+// NEXT_PUBLIC_* in application code, so the kit can't see them from inside
+// node_modules on the client. Module scope so it runs before any kit fetch;
+// the package's `.` and `./utils` entries each carry their own copy of the
+// config, so configure both.
+const identityKitApiUrls = {
+  efpApiUrl: process.env.NEXT_PUBLIC_EFP_API_URL,
+  grailsApiUrl: process.env.NEXT_PUBLIC_RELICS_API_URL,
+  ensMetadataUrl: process.env.NEXT_PUBLIC_ENS_METADATA_URL,
+}
+setIdentityKitApiUrls(identityKitApiUrls)
+setIdentityKitUtilsApiUrls(identityKitApiUrls)
 
 type ProviderProps = {
   children: React.ReactNode
