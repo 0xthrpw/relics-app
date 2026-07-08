@@ -2,7 +2,10 @@ import type { NextConfig } from 'next'
 import { withPostHogConfig } from '@posthog/nextjs-config'
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Self-contained server bundle for Docker: the runtime image ships
+  // .next/standalone + .next/static + public and runs `node server.js`,
+  // no node_modules needed.
+  output: 'standalone',
   async headers() {
     return [
       {

@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation'
 import { fetchNameBundle } from '@/api/name/bundle'
 import { formatNameMetadata } from '@/api/name/metadata'
 import { headers } from 'next/headers'
+import { APP_URL } from '@/constants'
 
 interface Props {
   params: Promise<{ name: string }>
@@ -19,8 +20,7 @@ interface Props {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
   const name = beautifyName(decodeURIComponent(params.name))
-  const imageUrl = `https://grails-git-new-metadata-service-efp.vercel.app/api/og/name?name=${encodeURIComponent(name)}`
-  // const imageUrl = `https://grails.app/previews/home.jpeg`
+  const imageUrl = `${APP_URL}/api/og/name?name=${encodeURIComponent(name)}`
 
   return {
     title: `${name}`,
@@ -29,7 +29,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: `${name}`,
       siteName: 'Grails',
       description: `${name} - Available on Grails`,
-      url: `https://grails.app/${encodeURIComponent(name)}`,
+      url: `${APP_URL}/${encodeURIComponent(name)}`,
       images: [
         {
           url: imageUrl,

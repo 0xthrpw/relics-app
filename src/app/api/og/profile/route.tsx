@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server'
 
 import { ens_beautify } from '@adraffy/ens-normalize'
 import { truncateAddress, fetchAccount } from 'ethereum-identity-kit/utils'
+import { APP_URL } from '@/constants'
 
 const ENS_METADATA_URL = process.env.ENS_METADATA_URL || 'https://metadata.ethid.org'
 
@@ -186,7 +187,7 @@ export async function GET(req: NextRequest) {
         >
           Profile
         </p>
-        <img alt='avatar' width='188' height='60' src='https://grails.app/your-ens-market-logo.svg' />
+        <img alt='avatar' width='188' height='60' src={`${APP_URL}/your-ens-market-logo.svg`} />
       </div>
     </div>,
     {

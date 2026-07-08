@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { NextRequest, NextResponse } from 'next/server'
-import { APP_ENS_ADDRESS } from '@/constants'
+import { APP_ENS_ADDRESS, APP_URL } from '@/constants'
+import { API_URL } from '@/constants/api'
 import { ENS_NAME_WRAPPER_ADDRESS } from '@/constants/web3/contracts'
 import { labelhash, namehash, isAddress } from 'viem'
 import { truncateAddress as truncateAddr, fetchAccount } from 'ethereum-identity-kit/utils'
@@ -345,7 +346,7 @@ export async function GET(req: NextRequest) {
 
     const getCategoryAvatarDataUri = async (): Promise<string | null> => {
       if (categories.length !== 1) return null
-      return fetchImageAsDataUri(`https://api.grails.app/api/v1/clubs/${categories[0]}/avatar`)
+      return fetchImageAsDataUri(`${API_URL}/clubs/${categories[0]}/avatar`)
     }
 
     const [ownerProfile, ensImage, googleAnalyticsData, categoryAvatarDataUri, defaultAvatarDataUri, interFonts] =
@@ -620,13 +621,7 @@ export async function GET(req: NextRequest) {
           ) : (
             <div style={{ display: 'flex', width: 530 }} />
           )}
-          <img
-            src='https://grails.app/logo-w-text.svg'
-            alt='Grails'
-            width={320}
-            height={98}
-            style={{ marginTop: 16 }}
-          />
+          <img src={`${APP_URL}/logo-w-text.svg`} alt='Grails' width={320} height={98} style={{ marginTop: 16 }} />
           <div
             style={{
               fontSize: 44,

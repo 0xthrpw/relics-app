@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { NextRequest, NextResponse } from 'next/server'
-import { APP_ENS_ADDRESS } from '@/constants'
+import { APP_ENS_ADDRESS, APP_URL } from '@/constants'
 import { ENS_NAME_WRAPPER_ADDRESS } from '@/constants/web3/contracts'
 import { labelhash, namehash } from 'viem'
 
@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
           />
         )}
         <div style={{ height: 80, width: 2, backgroundColor: '#ffffff' }} />
-        <img src='https://grails.app/your-ens-market-logo.svg' alt='Grails Logo' width={232} height={71} />
+        <img src={`${APP_URL}/your-ens-market-logo.svg`} alt='Grails Logo' width={232} height={71} />
       </div>,
       {
         ...size,
