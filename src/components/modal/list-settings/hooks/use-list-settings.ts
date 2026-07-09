@@ -23,7 +23,7 @@ import {
 } from 'ethereum-identity-kit'
 import { resolveEnsAddress } from '@/utils/web3/ens'
 import { listRegistryContract } from '@/lib/contracts'
-import { transports } from '@/lib/wagmi'
+import { transports } from '@/lib/rpc'
 import { fetchListState } from '@/api/user/getListState'
 
 type ListSettingsKey = 'user' | 'owner' | 'chain' | 'manager' | 'setPrimary' | 'resetSlot'

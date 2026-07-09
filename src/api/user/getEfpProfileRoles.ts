@@ -1,7 +1,7 @@
 import type { Config, UseChainsReturnType } from 'wagmi'
 import { createPublicClient, fromHex, getContract, type Address } from 'viem'
 import { coreEfpContracts, DEFAULT_CHAIN, efpListRecordsAbi, ProfileRoles } from 'ethereum-identity-kit'
-import { transports } from '@/lib/wagmi'
+import { transports } from '@/lib/rpc'
 import { listRegistryContract } from '@/lib/contracts'
 
 // import { efpListRecordsAbi } from '#/lib/abi'

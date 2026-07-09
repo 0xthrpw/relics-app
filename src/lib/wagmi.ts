@@ -9,9 +9,10 @@ import {
 } from '@rainbow-me/rainbowkit/wallets'
 import { mainnet, optimism, base } from 'wagmi/chains'
 import { type Chain, connectorsForWallets } from '@rainbow-me/rainbowkit'
-import { http, fallback, createStorage, cookieStorage, createConfig } from 'wagmi'
+import { createStorage, cookieStorage, createConfig } from 'wagmi'
 import { APP_DESCRIPTION, APP_ICON, APP_NAME, APP_URL } from '@/constants'
 import { safe } from 'wagmi/connectors'
+import { transports } from '@/lib/rpc'
 
 coinbaseWallet.preference = 'all'
 // Define the connectors for the app
@@ -67,7 +68,7 @@ export const chains: [ChainWithDetails, ...ChainWithDetails[]] = [
     blockExplorers: {
       default: {
         name: 'Blockscout',
-        url: 'https://explorer.base.org',
+        url: 'https://eth.blockscout.com',
       },
       blockscout: {
         name: 'Blockscout',
@@ -113,39 +114,11 @@ export const chains: [ChainWithDetails, ...ChainWithDetails[]] = [
   },
 ]
 
-export const transports = {
-  [mainnet.id]: fallback([
-    http(`https://eth-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_MAINNET_ALCHEMY_ID}`, {
-      batch: true,
-    }),
-    http(`https://smart-cosmological-telescope.quiknode.pro/${process.env.NEXT_PUBLIC_QUICKNODE_ID}`, {
-      batch: true,
-    }),
-    http('https://eth.llamarpc.com', {
-      batch: true,
-    }),
-  ]),
-  [optimism.id]: fallback([
-    http(`https://opt-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_OPTIMISM_ALCHEMY_ID}`, {
-      batch: true,
-    }),
-    http(`https://smart-cosmological-telescope.optimism.quiknode.pro/${process.env.NEXT_PUBLIC_QUICKNODE_ID}`, {
-      batch: true,
-    }),
-    http(`https://mainnet.optimism.io`, {
-      batch: true,
-    }),
-  ]),
-  [base.id]: fallback([
-    http(`https://base-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_BASE_ALCHEMY_ID}`, {
-      batch: true,
-    }),
-    http(`https://smart-cosmological-telescope.base-mainnet.quiknode.pro/${process.env.NEXT_PUBLIC_QUICKNODE_ID}`, {
-      batch: true,
-    }),
-    http('https://mainnet.base.org/', { batch: true }),
-  ]),
-}
+// Transports live in @/lib/rpc (server-safe, no RainbowKit) so server code
+// can build viem clients without pulling in client-only connector helpers.
+// Server code must import from '@/lib/rpc' directly — importing this module
+// evaluates connectorsForWallets(), which is client-only.
+export { transports }
 
 const config = createConfig({
   ssr: true,

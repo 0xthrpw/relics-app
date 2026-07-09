@@ -1,13 +1,14 @@
 import { mainnet } from 'viem/chains'
-import { createPublicClient, http } from 'viem'
+import { createPublicClient } from 'viem'
 
+import { transports } from '@/lib/rpc'
 import { ChainlinkABI } from '@/constants/web3/abi/ChainlinkAbi'
 
 export const getEtherPrice = async (short?: boolean) => {
   try {
     const client = createPublicClient({
       chain: mainnet,
-      transport: http(`https://eth-mainnet.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_MAINNET_ALCHEMY_ID}`),
+      transport: transports[mainnet.id],
     })
 
     const price = await client.readContract({

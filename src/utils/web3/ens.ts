@@ -1,6 +1,6 @@
 import { ENS_METADATA_URL } from '@/constants/ens'
 import { normalizeName } from '@/lib/ens'
-import { transports } from '@/lib/wagmi'
+import { transports } from '@/lib/rpc'
 import { createPublicClient, hexToBigInt, labelhash } from 'viem'
 import { mainnet } from 'viem/chains'
 
