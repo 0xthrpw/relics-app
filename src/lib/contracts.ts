@@ -1,6 +1,6 @@
 import { coreEfpContracts, DEFAULT_CHAIN, efpListRegistryAbi } from 'ethereum-identity-kit'
 import { createPublicClient, getContract } from 'viem'
-import { transports } from './wagmi'
+import { transports } from './rpc'
 
 export const listRegistryContract = getContract({
   address: coreEfpContracts.EFPListRegistry,
