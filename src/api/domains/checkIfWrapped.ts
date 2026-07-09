@@ -1,5 +1,10 @@
 import { ENS_NAME_WRAPPER_ADDRESS } from '@/constants/web3/contracts'
 
+// Our ensnode's subgraph-compatible endpoint. Runs in the browser, so the
+// value is baked at build time from .env.production / build args.
+const ENSNODE_SUBGRAPH_URL =
+  process.env.NEXT_PUBLIC_ENSNODE_SUBGRAPH_URL || 'https://ensnode-api-production-500f.up.railway.app/subgraph'
+
 export type CheckIfWrappedResponse = {
   data: {
     domains: {
@@ -22,7 +27,7 @@ export const checkIfWrapped = async (domain: string) => {
   }
 }
   `
-  const response = await fetch(`https://ensnode-api-production-500f.up.railway.app/subgraph`, {
+  const response = await fetch(ENSNODE_SUBGRAPH_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
