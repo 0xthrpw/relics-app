@@ -174,7 +174,7 @@ const ImageUploadModal: React.FC<ImageUploadModalProps> = ({ name, imageType, cu
         className='bg-background border-tertiary p-lg relative flex max-h-[calc(100dvh-56px)] w-full max-w-md flex-col gap-4 rounded-md border-2 shadow-lg'
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className='font-sedan-sc text-foreground text-2xl capitalize'>{imageType} Image</h2>
+        <h2 className='font-display text-foreground text-2xl capitalize'>{imageType} Image</h2>
 
         <TabSelector
           tabs={[

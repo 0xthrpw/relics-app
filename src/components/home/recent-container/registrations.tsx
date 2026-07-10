@@ -21,7 +21,7 @@ const Registrations = () => {
   return (
     <div className='flex flex-col'>
       <div className='p-md @[64rem]/app:px-lg flex w-full items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl font-medium @[40rem]/app:text-4xl'>Top Registrations</h2>
+        <h2 className='font-display text-3xl font-medium @[40rem]/app:text-4xl'>Top Registrations</h2>
         <Link
           href='/analytics'
           onClick={() => {

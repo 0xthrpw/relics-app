@@ -20,7 +20,7 @@ const ActivityPanel: React.FC<Props> = ({ name }) => {
       )}
       style={{ maxHeight: '390px', overflow: 'hidden' }}
     >
-      <h2 className='px-lg @[80rem]/app:px-xl font-sedan-sc text-3xl'>Activity</h2>
+      <h2 className='px-lg @[80rem]/app:px-xl font-display text-3xl'>Activity</h2>
       <div className='px-md z-0 w-full overflow-y-auto @[40rem]/app:px-0'>
         <Activity
           paddingBottom='0px'

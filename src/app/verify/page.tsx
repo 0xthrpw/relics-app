@@ -4,7 +4,7 @@ import Verify from './verify'
 
 export const metadata: Metadata = {
   title: `Verify Email`,
-  description: `Verify your email address on Grails`,
+  description: `Verify your email address on Relics`,
 }
 
 const UserPage = () => {

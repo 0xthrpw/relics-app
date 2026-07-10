@@ -137,8 +137,8 @@ const ShareModal: React.FC<ShareModalProps> = ({
   const handleCopy = async () => {
     if (!imageUrl || !apiEndpoint) return
 
-    const fullUrl = `https://grails.app${apiEndpoint}`
-    const shareText = `Check out my name on @grailsmarket https://grails.app/${domainName}`
+    const fullUrl = `https://relics.bid${apiEndpoint}`
+    const shareText = `Check out my name on Relics https://relics.bid/${domainName}`
     const isMobileOrTablet = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
     const copyUrl = async () => {
@@ -243,7 +243,7 @@ const ShareModal: React.FC<ShareModalProps> = ({
         className='border-tertiary bg-background p-lg sm:p-xl relative mx-auto flex max-h-[calc(100dvh-80px)] w-full flex-col items-center gap-2 overflow-y-auto border-t transition-all duration-300 sm:gap-2 md:w-fit md:justify-center md:rounded-md md:border-2 starting:translate-y-full md:starting:translate-y-0'
       >
         <div className='flex w-full flex-col items-center gap-2 sm:w-[440px]'>
-          <h2 className='font-sedan-sc mb-2 text-3xl'>
+          <h2 className='font-display mb-2 text-3xl'>
             Share{' '}
             {type === 'listing'
               ? 'Listing'

@@ -1,15 +1,15 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #222222;
-  --foreground: #ffffff;
-  --primary: #ffdfc0;
-  --secondary: #333333;
-  --tertiary: #444444;
-  --neutral: #aaaaaa;
-  --premium: #74fd43;
-  --grace: #efb100;
-  --available: #2db5ff;
+  --background: #101617;
+  --foreground: #f0f6f2;
+  --primary: #59cfae;
+  --secondary: #1b2527;
+  --tertiary: #2d3c3e;
+  --neutral: #93a8a3;
+  --premium: #e8c15c;
+  --grace: #ee9235;
+  --available: #4cc3ff;
   --max-width-domain-panel: 1700px;
   --max-width-app: 2340px;
   --padding-sm: 4px;
@@ -35,20 +35,20 @@
   --font-size-8xl: 64px;
   --font-size-9xl: 68px;
   --font-size-10xl: 80px;
-  --shadow-color: #8885;
+  --shadow-color: #4fc3a133;
   --shadow-small: 1px 1px 2px 0px var(--shadow-color);
   --shadow-medium: 2px 2px 4px 0px var(--shadow-color);
   --shadow-large: 4px 4px 8px 0px var(--shadow-color);
   --shadow-xl: 4px 8px 16px 0px var(--shadow-color);
-  --shadow-bulk: 0 0 20px -6px #ffdfc0bb;
-  --shadow-footer: 0 -4px 40px 4px #ffdfc0;
-  --shadow-homeCard: -2px 0 12px 0 #111a;
+  --shadow-bulk: 0 0 20px -6px #59cfaebb;
+  --shadow-footer: 0 -4px 40px 4px #59cfae;
+  --shadow-homeCard: -2px 0 12px 0 #070b0baa;
 
   /* Custom Ethereum Identity Kit colors */
-  --ethereum-identity-kit-sign-in-button: #ffdfc0;
-  --ethereum-identity-kit-sign-in-button-dark: #ffdfc0;
-  --ethereum-identity-kit-sign-in-button-hover: #dcc0a5;
-  --ethereum-identity-kit-sign-in-button-hover-dark: #dcc0a5;
+  --ethereum-identity-kit-sign-in-button: #59cfae;
+  --ethereum-identity-kit-sign-in-button-dark: #59cfae;
+  --ethereum-identity-kit-sign-in-button-hover: #47b795;
+  --ethereum-identity-kit-sign-in-button-hover-dark: #47b795;
 }
 
 @theme inline {
@@ -67,7 +67,7 @@
   --color-grace: var(--grace);
   --color-available: var(--available);
   --font-inter: var(--font-inter);
-  --font-sedan-sc: var(--font-sedan-sc);
+  --font-display: var(--font-display);
   --padding-sm: var(--padding-sm);
   --padding-md: var(--padding-md);
   --padding-lg: var(--padding-lg);
@@ -162,7 +162,7 @@ body {
 }
 
 .background-radial-primary {
-  background: radial-gradient(circle at center, #ffdfc029 0%, transparent 75%);
+  background: radial-gradient(circle at center, #59cfae29 0%, transparent 75%);
   pointer-events: none;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 .gradient-gray {
-  background: linear-gradient(135deg, rgba(129, 133, 152, 0.7) 0%, rgba(129, 133, 152, 0.05) 103.11%);
+  background: linear-gradient(135deg, rgba(126, 148, 142, 0.7) 0%, rgba(126, 148, 142, 0.05) 103.11%);
 }
 
 /* .user-profile {
@@ -296,7 +296,7 @@ body {
 .sign-in-button-text {
   font-weight: 500;
   font-size: 18px;
-  font-family: var(--font-sedan-sc);
+  font-family: var(--font-display);
 }
 
 .signed-in-user-profile {

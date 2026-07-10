@@ -1,5 +1,5 @@
 import OpenSea from 'public/logos/opensea.svg'
-import Grails from 'public/logo.svg'
+import Relics from 'public/logo.svg'
 import { DropdownOption } from '@/components/ui/dropdown'
 import { API_URL } from '@/constants/api'
 
@@ -13,7 +13,7 @@ export const PERIOD_OPTIONS: DropdownOption[] = [
 
 export const SOURCE_OPTIONS: DropdownOption[] = [
   { value: 'all', label: 'All Markets' },
-  { value: 'grails', label: 'Grails', icon: Grails },
+  { value: 'grails', label: 'Relics', icon: Relics },
   { value: 'opensea', label: 'OpenSea', icon: OpenSea },
 ]
 

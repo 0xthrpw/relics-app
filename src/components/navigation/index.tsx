@@ -132,18 +132,18 @@ const Navigation = ({ showInfo }: { showInfo: boolean }) => {
               handleDropdownOption(null)
             }}
             className='-ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-md transition-opacity hover:opacity-80 md:ml-0 md:h-auto md:w-auto'
-            aria-label='Grails Market home'
+            aria-label='Relics Market home'
           >
             <Image
               src={logoMobile}
-              alt='Grails Market'
+              alt='Relics Market'
               width={32}
               height={32}
               className='block h-7 w-auto md:h-9 xl:hidden'
             />
             <Image
               src={logo}
-              alt='Grails Market'
+              alt='Relics Market'
               width={130}
               height={40}
               className='hidden h-[39px] w-[124px] xl:block'

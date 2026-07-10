@@ -54,7 +54,7 @@ const Details: React.FC<Props> = ({ user }) => {
     <div className='border-tertiary bg-secondary flex w-full flex-col justify-between gap-2 p-2 @[40rem]/app:gap-4 @[48rem]/app:p-4 @[64rem]/app:w-[380px] @[64rem]/app:border-l-2'>
       <div className='flex flex-col gap-3'>
         {user && isAddress(user as string) && <SendMessageButton recipient={user as string} className='w-full' />}
-        {/* <h3 className='font-sedan-sc hidden text-3xl lg:block'>Account</h3> */}
+        {/* <h3 className='font-display hidden text-3xl lg:block'>Account</h3> */}
         <div className='grid grid-cols-4 gap-y-2 @[64rem]/app:grid-cols-2'>
           <div className='border-neutral z-10 flex h-fit flex-col items-start border-l-2 pl-2'>
             {balancesLoading ? (
@@ -135,7 +135,7 @@ const Details: React.FC<Props> = ({ user }) => {
               <p className='text-lg font-medium'>{details?.lastSeenAt ? formatTimeAgo(details?.lastSeenAt) : '-'}</p>
             )}
             <div className='flex items-center gap-1'>
-              <Image src={GrailsIcon} alt='Arrow right' width={12} height={12} />
+              <Image src={GrailsIcon} alt='Relics' width={12} height={9} />
               <p className='text-neutral text-md font-medium'>Last seen</p>
             </div>
           </div>

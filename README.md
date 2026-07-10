@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://grails.app">
-    <img src="https://grails.app/logo-w-text.svg" alt="Grails Market" width="320" />
+  <a href="https://relics.bid">
+    <img src="https://relics.bid/logo-w-text.svg" alt="Relics" width="320" />
   </a>
 </p>
 
@@ -11,26 +11,25 @@
 </p>
 
 <p align="center">
-  <a href="https://grails.app"><img src="https://img.shields.io/badge/live-grails.app-000?style=flat-square" alt="Live site" /></a>
+  <a href="https://relics.bid"><img src="https://img.shields.io/badge/live-relics.bid-000?style=flat-square" alt="Live site" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js" alt="Next.js 15" />
   <img src="https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react" alt="React 19" />
   <img src="https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind-4-38bdf8?style=flat-square&logo=tailwindcss" alt="Tailwind CSS 4" />
   <img src="https://img.shields.io/badge/Bun-1.x-fbf0df?style=flat-square&logo=bun" alt="Bun" />
-  <a href="https://x.com/grailsmarket"><img src="https://img.shields.io/badge/follow-@grailsmarket-1d9bf0?style=flat-square&logo=x" alt="Follow on X" /></a>
 </p>
 
 ---
 
 ## About
 
-Grails is an open-source marketplace and manager for ENS names. It supports search and discovery, single and bulk listings/offers via Seaport, registration and renewal, profile and records management, on-chain activity, watchlists, leaderboards and chat — across Ethereum, Base and Optimism.
+Relics is an open-source marketplace and manager for ENS names, built on the Grails codebase. It supports search and discovery, single and bulk listings/offers via Seaport, registration and renewal, profile and records management, on-chain activity, watchlists, leaderboards and chat — across Ethereum, Base and Optimism.
 
 This repository is the web app. It is one of three components:
 
-- **App** (this repo) — Next.js frontend at [grails.app](https://grails.app)
-- **Backend** — REST API and database — [grailsmarket/backend](https://github.com/grailsmarket/backend)
+- **App** (this repo) — Next.js frontend at [relics.bid](https://relics.bid)
+- **Backend** — REST API and database — [0xthrpw/relics-backend](https://github.com/0xthrpw/relics-backend)
 - **Contracts** — Solidity smart contracts — [grailsmarket/contracts](https://github.com/grailsmarket/contracts)
 
 ## Tech stack
@@ -53,8 +52,8 @@ This repository is the web app. It is one of three components:
 ### Setup
 
 ```bash
-git clone https://github.com/grailsmarket/app.git
-cd app
+git clone https://github.com/0xthrpw/relics-app.git
+cd relics-app
 bun install
 cp .env.example .env.local
 # fill in the values in .env.local (see below)
@@ -97,12 +96,12 @@ Public RPCs are used as a final fallback, but reliable Alchemy / QuickNode keys 
 
 ### OpenSea / Seaport
 
-| Variable                      | Required | Description                                                      |
-| ----------------------------- | -------- | ---------------------------------------------------------------- |
-| `OPENSEA_API_KEY`             | yes      | Server-side OpenSea API key                                      |
-| `NEXT_PUBLIC_OPENSEA_API_KEY` | yes      | Client-side OpenSea API key                                      |
-| `NEXT_PUBLIC_OPENSEA_API_URL` | yes      | OpenSea API base URL (e.g. `https://api.opensea.io`)             |
-| `NEXT_PUBLIC_USE_CONDUIT`     | optional | Set to `true` to route Seaport orders through the Grails conduit |
+| Variable                      | Required | Description                                                           |
+| ----------------------------- | -------- | --------------------------------------------------------------------- |
+| `OPENSEA_API_KEY`             | yes      | Server-side OpenSea API key                                           |
+| `NEXT_PUBLIC_OPENSEA_API_KEY` | yes      | Client-side OpenSea API key                                           |
+| `NEXT_PUBLIC_OPENSEA_API_URL` | yes      | OpenSea API base URL (e.g. `https://api.opensea.io`)                  |
+| `NEXT_PUBLIC_USE_CONDUIT`     | optional | Set to `true` to route Seaport orders through the marketplace conduit |
 
 ### ENS metadata
 
@@ -124,7 +123,7 @@ Public RPCs are used as a final fallback, but reliable Alchemy / QuickNode keys 
 
 ```
 src/
-  api/            HTTP clients for the Grails backend
+  api/            HTTP clients for the Relics backend
   app/            Next.js App Router routes, layouts, and API routes
   components/    Shared UI (navigation, modals, filters, chat, ...)
   constants/      Chain, contract, and app-wide constants
@@ -141,8 +140,8 @@ public/           Static assets (logos, icons, OG previews)
 
 | Repo                                                                | Purpose                                                                                        |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [grailsmarket/app](https://github.com/grailsmarket/app)             | This Next.js frontend                                                                          |
-| [grailsmarket/backend](https://github.com/grailsmarket/backend)     | REST API and Postgres database powering listings, offers, activity, chat, search and analytics |
+| [0xthrpw/relics-app](https://github.com/0xthrpw/relics-app)         | This Next.js frontend                                                                          |
+| [0xthrpw/relics-backend](https://github.com/0xthrpw/relics-backend) | REST API and Postgres database powering listings, offers, activity, chat, search and analytics |
 | [grailsmarket/contracts](https://github.com/grailsmarket/contracts) | Solidity smart contracts (Seaport conduit, registration helpers, on-chain logic)               |
 
 ## Contributing
@@ -151,4 +150,4 @@ Issues and pull requests are welcome. Run `bun run checks` before opening a PR.
 
 ## License
 
-[MIT](./LICENSE) &copy; Grails: ENS Market & Manager
+[MIT](./LICENSE) &copy; Relics — Your ENS Market

@@ -299,7 +299,7 @@ const KeywordMetricsComponent: React.FC<KeywordMetricsProps> = ({ name, expiryDa
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className='flex flex-row items-center gap-2'>
-            <h3 className='font-sedan-sc text-3xl transition-opacity group-hover/metrics:opacity-80'>Google Metrics</h3>
+            <h3 className='font-display text-3xl transition-opacity group-hover/metrics:opacity-80'>Google Metrics</h3>
             <Tooltip
               showOnMobile={true}
               label={`For the label without the .eth suffix. Includes similar variants.`}

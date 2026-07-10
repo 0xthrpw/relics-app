@@ -43,7 +43,7 @@ const GlobalChatRow: React.FC = () => {
       )}
     >
       <div className='bg-background border-tertiary flex h-10 w-10 shrink-0 items-center justify-center rounded-full border'>
-        <Image src={Logo} alt='Grails' width={26} height={26} className='h-6.5 w-6.5' />
+        <Image src={Logo} alt='Relics' width={26} height={20} className='h-6.5 w-auto' />
       </div>
       <div className='relative min-w-0 flex-1'>
         <div className='flex items-center justify-between gap-2'>
@@ -66,7 +66,7 @@ const GlobalChatRow: React.FC = () => {
               <span>: {messagePreview(newest)}</span>
             </>
           ) : (
-            'Talk to the whole Grails community'
+            'Talk to the whole Relics community'
           )}
         </p>
       </div>

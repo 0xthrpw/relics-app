@@ -21,7 +21,7 @@ export class SeaportOrderBuilder {
       // Extract protocol_data which contains the Seaport order details
       // Handle different data structures:
       // 1. OpenSea listing object: { protocol_data: { parameters, signature }, ... }
-      // 2. Grails order: { protocol_data: { parameters, signature }, ... }
+      // 2. Relics order: { protocol_data: { parameters, signature }, ... }
       // 3. Direct protocol data: { parameters, signature }
       let protocolData
 

@@ -1,9 +1,4 @@
-export const EXTRAS_ITEMS = [
-  {
-    label: 'Documentation',
-    href: 'https://docs.grails.app',
-    target: '_blank',
-  },
+export const EXTRAS_ITEMS: { label: string; href: string; target?: string }[] = [
   {
     label: 'Terms of Service',
     href: '/terms-of-service',

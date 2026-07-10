@@ -240,7 +240,7 @@ const CategoryCard = ({ category, reduceColumns = false, sort }: CategoryCardPro
           </span>
           {localizeNumber(category.registered_count + category.grace_count)}
           </p>
-          <p className='font-sedan-sc text-xl @[48rem]/app:text-2xl'>
+          <p className='font-display text-xl @[48rem]/app:text-2xl'>
             Reg+<span className='text-grace'>Grace</span>
           </p>
         </div> */}

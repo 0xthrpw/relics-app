@@ -191,9 +191,7 @@ const RegistrationModal: React.FC = () => {
     return (
       <ModalBackdrop onClose={handleClose}>
         <div className='z-10 flex min-h-6 items-center justify-center pb-2'>
-          <h2 className='font-sedan-sc text-center text-3xl'>
-            {isBulk ? 'Names Not Available' : 'Name Not Available'}
-          </h2>
+          <h2 className='font-display text-center text-3xl'>{isBulk ? 'Names Not Available' : 'Name Not Available'}</h2>
         </div>
         <div className='flex flex-col items-center gap-4 py-8'>
           <p className='text-center text-lg'>
@@ -217,7 +215,7 @@ const RegistrationModal: React.FC = () => {
   if (showCancelWarning) {
     return (
       <ModalBackdrop onClose={() => setShowCancelWarning(false)}>
-        <h2 className='font-sedan-sc text-center text-3xl'>Cancel Registration</h2>
+        <h2 className='font-display text-center text-3xl'>Cancel Registration</h2>
         <p className='text-center font-medium'>
           Are you sure you want to cancel this registration? You will lose your commitment and have to start over.
         </p>
@@ -253,7 +251,7 @@ const RegistrationModal: React.FC = () => {
       className={cn((showDatePicker || perNameDatePickerIndex !== null) && 'min-h-[480px]')}
     >
       <div className='z-10 flex min-h-6 items-center justify-center pb-2'>
-        <h2 className='font-sedan-sc text-center text-3xl'>{isBulk ? 'Register Names' : 'Register Name'}</h2>
+        <h2 className='font-display text-center text-3xl'>{isBulk ? 'Register Names' : 'Register Name'}</h2>
         {isActiveFlow && (
           <button
             onClick={handleClose}
@@ -281,7 +279,7 @@ const RegistrationModal: React.FC = () => {
         <>
           {!isBulk && (
             <div className='flex items-center justify-between gap-2'>
-              <p className='font-sedan-sc text-center text-2xl'>Name</p>
+              <p className='font-display text-center text-2xl'>Name</p>
               <p className='text-center text-xl font-bold'>{beautifyName(firstName!)}</p>
             </div>
           )}

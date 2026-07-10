@@ -7,7 +7,6 @@ import HeroSearch from '@/components/home/heroSearch'
 import RecentContainer from '@/components/home/recent-container'
 import Testemonials from '@/components/home/testemonials'
 import TopCategories from '@/components/home/topCategories'
-import TwitterBot from '@/components/home/twitterBot'
 import AnimateIn from '@/components/ui/animateIn'
 
 const HERO_PILLS = ['0% Market Fees', 'Bulk Tools', 'Open Source'] as const
@@ -18,7 +17,7 @@ const Home = () => {
       <div className='z-10 mx-auto flex h-full w-full max-w-[1296px] flex-col items-center gap-4 pt-14 @[48rem]/app:gap-12 @[64rem]/app:pt-8'>
         <AnimateIn className='flex w-full flex-col items-center justify-center px-4 @[48rem]/app:px-8 @[64rem]/app:flex-row @[64rem]/app:items-start @[64rem]/app:justify-start @[80rem]/app:gap-0 @[80rem]/app:px-4'>
           <div className='flex w-full flex-col items-center justify-center gap-2'>
-            <h1 className='font-sedan-sc text-center text-4xl @[40rem]/app:text-7xl @[80rem]/app:text-9xl'>
+            <h1 className='font-display text-center text-4xl @[40rem]/app:text-7xl @[80rem]/app:text-9xl'>
               ENS Manager & Market
             </h1>
             <div className='mb-2 flex flex-wrap items-center justify-center gap-2 @[40rem]/app:mb-4 @[48rem]/app:gap-3'>
@@ -41,7 +40,6 @@ const Home = () => {
           <Testemonials />
           <BulkTools />
           <TopCategories />
-          <TwitterBot />
           <FrequentlyAskedQuestions />
         </div>
       </div>

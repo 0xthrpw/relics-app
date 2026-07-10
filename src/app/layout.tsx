@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Sedan_SC, Inter } from 'next/font/google'
+import { Cinzel, Inter } from 'next/font/google'
 import Providers from './providers'
 import SuspendedPostHogPageView from '@/components/posthog/posthog-pageview'
 import PostHogGroupSync from '@/components/posthog/posthog-group-sync'
@@ -14,9 +14,9 @@ const inter = Inter({
   subsets: ['latin'],
 })
 
-const sedanSC = Sedan_SC({
-  variable: '--font-sedan-sc',
-  weight: '400',
+const cinzel = Cinzel({
+  variable: '--font-display',
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = sharedMetadata
@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='dark'>
-      <body className={`${inter.variable} ${sedanSC.variable} antialiased`}>
+      <body className={`${inter.variable} ${cinzel.variable} antialiased`}>
         <Providers>{children}</Providers>
         <ServiceWorkerRegistration />
         <PostHogGroupSync />

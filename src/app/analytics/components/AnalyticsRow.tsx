@@ -10,7 +10,7 @@ import Price from '@/components/ui/price'
 import User from '@/components/ui/user'
 import NameImage from '@/components/ui/nameImage'
 import OpenSea from 'public/logos/opensea.svg'
-import Grails from 'public/logo.svg'
+import Relics from 'public/logo.svg'
 import EthGray from 'public/icons/eth-gray.svg'
 import { AnalyticsListing, AnalyticsOffer, AnalyticsRegistration, AnalyticsSale } from '@/types/analytics'
 import { getCategoryDetails } from '@/utils/getCategoryDetails'
@@ -23,7 +23,7 @@ interface SourceIconProps {
 }
 
 const SourceIcon: React.FC<SourceIconProps> = ({ source }) => {
-  const icon = source === 'opensea' ? OpenSea : source === 'grails' ? Grails : EthGray
+  const icon = source === 'opensea' ? OpenSea : source === 'grails' ? Relics : EthGray
 
   if (!icon) return <div className='h-6 w-6' />
 

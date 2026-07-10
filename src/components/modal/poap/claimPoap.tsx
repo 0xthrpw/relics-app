@@ -17,7 +17,7 @@ const ClaimPoap: React.FC = () => {
 
   return (
     <div className='flex w-full flex-col items-center justify-center gap-4'>
-      <h2 className='font-sedan-sc text-3xl'>Claim POAP!</h2>
+      <h2 className='font-display text-3xl'>Claim POAP!</h2>
       {poapLoading ? (
         <div className='flex w-full flex-col items-center justify-center gap-6 pt-8 pb-4'>
           <div className='border-primary inline-block h-12 w-12 animate-spin rounded-full border-b-2'></div>

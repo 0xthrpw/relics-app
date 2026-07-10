@@ -39,7 +39,7 @@ const ListView: React.FC = () => {
   return (
     <>
       <div className='border-tertiary flex h-14.5 items-center justify-between gap-3 border-b-2 pr-3 pl-4'>
-        <h2 className='font-sedan-sc text-foreground text-2xl'>Grails Chat</h2>
+        <h2 className='font-display text-foreground text-2xl'>Relics Chat</h2>
         <div className='flex shrink-0 items-center gap-2'>
           {isAuthed && (
             <PrimaryButton

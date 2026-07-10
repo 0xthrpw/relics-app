@@ -50,7 +50,7 @@ export const createOffer = async ({
   })
 
   if (!response.ok) {
-    throw new Error('Failed to create Grails offer')
+    throw new Error('Failed to create Relics offer')
   }
 
   return response.json()

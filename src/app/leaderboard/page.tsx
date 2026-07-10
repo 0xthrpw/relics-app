@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   title: 'Leaderboard',
   description: 'ENS leaderboard - top holders ranked by names owned, category names, and expired names',
   openGraph: {
-    title: 'Leaderboard | Grails',
+    title: 'Leaderboard | Relics',
     description: 'ENS leaderboard - top holders ranked by names owned, category names, and expired names',
     siteName: 'Leaderboard',
-    url: 'https://grails.app/leaderboard',
-    images: [{ url: 'https://grails.app/previews/marketplace.jpeg' }],
+    url: 'https://relics.bid/leaderboard',
+    images: [{ url: 'https://relics.bid/previews/marketplace.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Leaderboard | Grails',
+    title: 'Leaderboard | Relics',
     description: 'ENS leaderboard - top holders ranked by names owned, category names, and expired names',
-    images: 'https://grails.app/previews/marketplace.jpeg',
+    images: 'https://relics.bid/previews/marketplace.jpeg',
   },
 }
 

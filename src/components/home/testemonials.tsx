@@ -75,8 +75,8 @@ export default function Testemonials() {
 
   return (
     <div className='flex w-full flex-col items-center justify-center gap-4 @[40rem]/app:gap-6 @[48rem]/app:gap-8 @[64rem]/app:items-start'>
-      <h2 className='font-sedan-sc px-2 text-center text-4xl @[40rem]/app:text-5xl @[48rem]/app:text-6xl @[64rem]/app:text-left'>
-        What <span className='text-primary'>users</span> say about Grails
+      <h2 className='font-display px-2 text-center text-4xl @[40rem]/app:text-5xl @[48rem]/app:text-6xl @[64rem]/app:text-left'>
+        What <span className='text-primary'>users</span> say
       </h2>
 
       {/* Carousel container */}

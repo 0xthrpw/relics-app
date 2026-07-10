@@ -59,8 +59,8 @@ const AnalyticsChart: React.FC<AnalyticsChartProps> = ({ title, data, source, is
     const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`)
 
     // Primary color from globals.css
-    const primaryColor = '#ffdfc0'
-    const primaryColorAlpha = '#ffdfc02f' // 30% opacity
+    const primaryColor = '#59cfae'
+    const primaryColorAlpha = '#59cfae2f' // 30% opacity
 
     // Scales
     const xScale = d3
@@ -114,8 +114,8 @@ const AnalyticsChart: React.FC<AnalyticsChartProps> = ({ title, data, source, is
       .attr('fill', 'currentColor')
       .style('font-size', '11px')
 
-    g.selectAll('.domain').attr('stroke', '#444444')
-    g.selectAll('.tick line').attr('stroke', '#444444')
+    g.selectAll('.domain').attr('stroke', '#2d3c3e')
+    g.selectAll('.tick line').attr('stroke', '#2d3c3e')
 
     // Y axis
     const yAxis = d3.axisLeft(yScale).ticks(5).tickFormat(d3.format('.2s'))

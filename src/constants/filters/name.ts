@@ -79,7 +79,7 @@ export const MARKETPLACE_OPTIONS = ['none', 'grails', 'opensea'] as const
 
 export const MARKETPLACE_OPTION_LABELS: Record<MarketplaceOption, string> = {
   none: '---',
-  grails: 'Grails',
+  grails: 'Relics',
   opensea: 'Opensea',
 }
 

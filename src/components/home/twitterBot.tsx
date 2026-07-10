@@ -46,7 +46,7 @@ const TwitterBot = () => {
       ></iframe>
       <div className='flex flex-col gap-6'>
         <div className='flex flex-col gap-3'>
-          <h2 className='font-sedan-sc text-center text-5xl @[40rem]/app:text-6xl @[48rem]/app:text-left'>
+          <h2 className='font-display text-center text-5xl @[40rem]/app:text-6xl @[48rem]/app:text-left'>
             Twitter Bot
           </h2>
           <p className='text-center text-xl font-semibold @[48rem]/app:text-left'>

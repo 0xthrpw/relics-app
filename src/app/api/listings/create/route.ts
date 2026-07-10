@@ -174,9 +174,9 @@ export async function POST(request: NextRequest) {
       }
       return NextResponse.json({ grails: responses })
     } catch (error: any) {
-      console.error('Error creating orders on Grails marketplace:', error)
+      console.error('Error creating orders on Relics marketplace:', error)
       return NextResponse.json(
-        { error: error.message || 'Failed to create orders on Grails marketplace' },
+        { error: error.message || 'Failed to create orders on Relics marketplace' },
         { status: 500 }
       )
     }

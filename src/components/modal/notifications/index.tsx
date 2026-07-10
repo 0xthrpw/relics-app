@@ -89,7 +89,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({ isOpen, onClose }
         {/* Header */}
         <div className='p-lg flex flex-col gap-4 md:p-6'>
           <div className='flex items-center justify-between'>
-            <h2 className='font-sedan-sc text-foreground text-2xl'>Notifications</h2>
+            <h2 className='font-display text-foreground text-2xl'>Notifications</h2>
             <button onClick={onClose} className='hover:bg-primary/10 rounded-md p-1 transition-colors'>
               <Cross className='text-foreground h-4 w-4 cursor-pointer' />
             </button>

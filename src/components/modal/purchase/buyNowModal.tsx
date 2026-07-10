@@ -515,12 +515,12 @@ const BuyNowModal: React.FC<BuyNowModalProps> = ({ listing, domain, onClose }) =
           <div className='flex flex-col gap-3'>
             <div className='space-y-4'>
               <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>Name</p>
+                <p className='font-display text-xl'>Name</p>
                 <p className='text-right text-xl font-semibold'>{domain.name || `Token #${domain.token_id}`}</p>
               </div>
 
               <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>Total Price</p>
+                <p className='font-display text-xl'>Total Price</p>
                 <Price
                   price={listing.price}
                   currencyAddress={listing.currency_address}
@@ -531,7 +531,7 @@ const BuyNowModal: React.FC<BuyNowModalProps> = ({ listing, domain, onClose }) =
 
               {gasEstimate && gasPrice && (
                 <div className='flex flex-row items-center justify-between rounded-lg'>
-                  <p className='font-sedan-sc text-xl'>Estimated Gas</p>
+                  <p className='font-display text-xl'>Estimated Gas</p>
                   <div className='text-right'>
                     <p className='text-xl font-semibold'>
                       ~{formattedGasEstimate ? formattedGasEstimate.toString() : '<0.001'} ETH
@@ -541,7 +541,7 @@ const BuyNowModal: React.FC<BuyNowModalProps> = ({ listing, domain, onClose }) =
               )}
 
               {/* <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>Your Balance</p>
+                <p className='font-display text-xl'>Your Balance</p>
                 <p className={`text-xl font-semibold ${!hasSufficientBalance ? 'text-red-400' : ''}`}>
                   {currentBalanceFormatted}
                 </p>
@@ -712,7 +712,7 @@ const BuyNowModal: React.FC<BuyNowModalProps> = ({ listing, domain, onClose }) =
           <ClaimPoap />
         ) : (
           <>
-            <h2 className='font-sedan-sc mb-6 min-h-6 text-center text-3xl'>Purchase Name</h2>
+            <h2 className='font-display mb-6 min-h-6 text-center text-3xl'>Purchase Name</h2>
             {getModalContent()}
           </>
         )}

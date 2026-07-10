@@ -56,7 +56,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #444444, #222222)',
+          background: 'radial-gradient(circle, #2d3c3e, #101617)',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
           />
         )}
         <div style={{ height: 80, width: 2, backgroundColor: '#ffffff' }} />
-        <img src={`${APP_URL}/your-ens-market-logo.svg`} alt='Grails Logo' width={232} height={71} />
+        <img src={`${APP_URL}/your-ens-market-logo.svg`} alt='Relics Logo' width={232} height={62} />
       </div>,
       {
         ...size,

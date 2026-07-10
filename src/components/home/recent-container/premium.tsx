@@ -38,7 +38,7 @@ const Premium = () => {
   return (
     <div className='flex flex-col'>
       <div className='p-md @[64rem]/app:px-lg flex w-full items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl font-medium @[40rem]/app:text-4xl'>In Premium</h2>
+        <h2 className='font-display text-3xl font-medium @[40rem]/app:text-4xl'>In Premium</h2>
         <Link
           href='/marketplace?tab=premium'
           className='text-primary hover:text-primary/80 group flex items-center justify-end gap-2 text-center text-lg font-semibold @[40rem]/app:text-xl'

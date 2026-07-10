@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'grails-pwa-v1'
+const CACHE_VERSION = 'relics-pwa-v1'
 const PRECACHE = `${CACHE_VERSION}-precache`
 const STATIC_CACHE = `${CACHE_VERSION}-static`
 const IMAGE_CACHE = `${CACHE_VERSION}-images`
