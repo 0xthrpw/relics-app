@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        background: '#222222',
+        background: '#191512',
         textAlign: 'center',
         fontWeight: 700,
         fontFamily: 'Inter',
@@ -125,7 +125,7 @@ export async function GET(req: NextRequest) {
           gap: 10,
         }}
       >
-        <img alt='avatar' width='190' height='60' src={`${APP_URL}/your-ens-market-logo.svg`} />
+        <img alt='avatar' width='190' height='57' src={`${APP_URL}/your-ens-market-logo.svg`} />
       </div>
     </div>,
     {

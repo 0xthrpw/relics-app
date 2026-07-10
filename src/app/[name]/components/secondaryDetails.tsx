@@ -69,7 +69,7 @@ const SecondaryDetails: React.FC<NameDetailsProps> = ({ nameDetails, nameDetails
         className='flex cursor-pointer flex-row items-center justify-between transition-opacity hover:opacity-80'
         onClick={() => setIsDetailsOpen(!isDetailsOpen)}
       >
-        <h3 className='font-sedan-sc text-3xl'>Details</h3>
+        <h3 className='font-display text-3xl'>Details</h3>
         <ShortArrow
           className={cn('h-4 w-4 flex-shrink-0 transition-transform', isDetailsOpen ? 'rotate-0' : 'rotate-180')}
         />

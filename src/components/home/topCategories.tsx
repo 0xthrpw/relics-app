@@ -56,7 +56,7 @@ const TopCategories = () => {
     <div className='w-full'>
       <div className='px-sm @[40rem]/app:px-md py-lg @[40rem]/app:p-xl flex items-center justify-between'>
         <div className='flex flex-col gap-1 @[40rem]/app:gap-2 @[64rem]/app:flex-row @[64rem]/app:items-center @[64rem]/app:gap-4'>
-          <h2 className='font-sedan-sc pb-1 text-4xl leading-11 @[40rem]/app:text-5xl @[48rem]/app:text-6xl'>
+          <h2 className='font-display pb-1 text-4xl leading-11 @[40rem]/app:text-5xl @[48rem]/app:text-6xl'>
             Top Categories
           </h2>
           <CategoriesSortDropdown />

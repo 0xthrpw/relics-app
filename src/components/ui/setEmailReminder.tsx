@@ -18,8 +18,8 @@ const SetEmailReminder: React.FC<SetEmailReminderProps> = ({ onClick, className 
 
   const isOnlySet = email.address && !email.verified // Wether an email is set but not verified
   const text = isOnlySet
-    ? 'Please verify your email to receive notifications and updates from Grails.'
-    : 'Set your email to receive notifications and updates from Grails.'
+    ? 'Please verify your email to receive notifications and updates from Relics.'
+    : 'Set your email to receive notifications and updates from Relics.'
   const buttonText = isOnlySet ? 'Verify' : 'Set Email'
 
   return (

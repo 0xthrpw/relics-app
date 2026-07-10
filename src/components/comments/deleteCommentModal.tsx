@@ -38,7 +38,7 @@ const DeleteCommentModal: React.FC<Props> = ({ isOpen, isLoading, onCancel, onCo
         className='bg-background border-tertiary p-lg flex w-[90vw] max-w-md flex-col gap-4 rounded-lg border-2 shadow-lg'
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 id='delete-comment-title' className='font-sedan-sc text-foreground text-2xl'>
+        <h2 id='delete-comment-title' className='font-display text-foreground text-2xl'>
           Delete comment?
         </h2>
         <p className='text-neutral text-md'>Are you sure you want to delete this comment? This cannot be undone.</p>

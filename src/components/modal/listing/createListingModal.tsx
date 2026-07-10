@@ -118,7 +118,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
     fetchBrokerConfig()
   }, [])
 
-  // Clear broker fields when Grails is deselected
+  // Clear broker fields when Relics is deselected
   useEffect(() => {
     if (!selectedMarketplace.includes('grails')) {
       setBrokerAddress('')
@@ -208,7 +208,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
           return
         }
         if (!selectedMarketplace.includes('grails')) {
-          setError('Brokered listings are only available on Grails')
+          setError('Brokered listings are only available on Relics')
           setStatus('error')
           return
         }
@@ -280,7 +280,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
 
     if (selectedMarketplace.includes('grails')) {
       fees.push({
-        label: 'Grails Fee (0%)',
+        label: 'Relics Fee (0%)',
         amount: prices.reduce((sum, price) => Number(sum) + Number(price) * 0.0, 0) as number,
       })
     }
@@ -316,9 +316,9 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
 
   const successMessage = () => {
     if (previousListings.length > 0) {
-      return `Listings for ${domains.map((domain) => domain.name).join(', ')} were edited successfully. The new listings are now active on ${selectedMarketplace.length > 1 ? 'Grails and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Grails' : 'OpenSea'}!`
+      return `Listings for ${domains.map((domain) => domain.name).join(', ')} were edited successfully. The new listings are now active on ${selectedMarketplace.length > 1 ? 'Relics and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Relics' : 'OpenSea'}!`
     } else {
-      return `Listings for ${domains.map((domain) => domain.name).join(', ')} were listed successfully on ${selectedMarketplace.length > 1 ? 'Grails and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Grails' : 'OpenSea'}!`
+      return `Listings for ${domains.map((domain) => domain.name).join(', ')} were listed successfully on ${selectedMarketplace.length > 1 ? 'Relics and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Relics' : 'OpenSea'}!`
     }
   }
 
@@ -490,7 +490,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                       {/* {previousListing && (
                       <>
                         <div className='flex w-full items-center justify-between gap-2'>
-                          <p className='font-sedan-sc text-xl'>Price</p>
+                          <p className='font-display text-xl'>Price</p>
                           <Price
                             price={previousListing.price}
                             currencyAddress={previousListing.currency_address as Address}
@@ -500,7 +500,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                           />
                         </div>
                         <div className='flex justify-between'>
-                          <p className='font-sedan-sc text-xl'>Marketplace</p>
+                          <p className='font-display text-xl'>Marketplace</p>
                           <div className='flex items-center gap-1'>
                             <Image
                               src={SOURCE_ICONS[previousListing.source as keyof typeof SOURCE_ICONS]}
@@ -513,7 +513,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                           </div>
                         </div>
                         <div className='flex justify-between'>
-                          <p className='font-sedan-sc text-xl'>Expiry Date</p>
+                          <p className='font-display text-xl'>Expiry Date</p>
                           <p className='max-w-2/3 truncate text-lg font-medium'>
                             {formatExpiryDate(previousListing.expires_at)}
                           </p>
@@ -538,8 +538,8 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                   className='p-md hover:bg-secondary flex w-full cursor-pointer items-center justify-between rounded-md transition-colors'
                 >
                   <div className='flex items-center gap-2'>
-                    <Image src={GrailsIcon} alt='Grails' width={24} height={24} />
-                    <p className='font-sedan-sc text-2xl'>Grails</p>
+                    <Image src={GrailsIcon} alt='Relics' width={24} height={24} />
+                    <p className='font-display text-2xl'>Relics</p>
                   </div>
                   <FilterSelector
                     onClick={() =>
@@ -580,7 +580,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
               </div>
             </div>
 
-            {/* Broker section - only show when Grails is selected */}
+            {/* Broker section - only show when Relics is selected */}
             {selectedMarketplace.length === 1 && selectedMarketplace[0] === 'grails' && (
               <div className='border-tertiary flex flex-col gap-0 rounded-md border p-3'>
                 <div
@@ -836,7 +836,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                   ? 'Submitting Listing...'
                   : selectedMarketplace.length === 0
                     ? 'Select a marketplace'
-                    : `List ${domains.length > 1 ? domains.length + ' Names' : domains[0].name} on ${selectedMarketplace.length > 1 ? 'Grails and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Grails' : 'OpenSea'}`}
+                    : `List ${domains.length > 1 ? domains.length + ' Names' : domains[0].name} on ${selectedMarketplace.length > 1 ? 'Relics and OpenSea' : selectedMarketplace[0] === 'grails' ? 'Relics' : 'OpenSea'}`}
               </PrimaryButton>
               <SecondaryButton onClick={handleClose} className='h-10 w-full'>
                 Close
@@ -854,9 +854,9 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
               <p className='text-neutral text-lg'>
                 Checking if you have approved the NFT collection for{' '}
                 {selectedMarketplace.length > 1
-                  ? 'Grails and OpenSea'
+                  ? 'Relics and OpenSea'
                   : selectedMarketplace[0] === 'grails'
-                    ? 'Grails'
+                    ? 'Relics'
                     : 'OpenSea'}
               </p>
             </div>
@@ -972,7 +972,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
           <ClaimPoap />
         ) : (
           <>
-            <h2 className='font-sedan-sc min-h-6 max-w-full truncate text-center text-3xl text-white'>
+            <h2 className='font-display min-h-6 max-w-full truncate text-center text-3xl text-white'>
               {previousListings.length > 0
                 ? domains.length > 1
                   ? 'Edit Listings'

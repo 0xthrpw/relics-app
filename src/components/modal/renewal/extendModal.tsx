@@ -378,7 +378,7 @@ const ExtendModal: React.FC<ExtendModalProps> = ({ onClose }) => {
         ) : (
           <>
             <div className='z-10 flex min-h-6 items-center justify-center pb-2'>
-              <h2 className='font-sedan-sc text-center text-3xl'>Extend Name{domains.length > 1 ? 's' : ''}</h2>
+              <h2 className='font-display text-center text-3xl'>Extend Name{domains.length > 1 ? 's' : ''}</h2>
             </div>
 
             {success ? (

@@ -5,19 +5,19 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Explore',
-  description: 'Find your next Grail on the Grails ENS Market',
+  description: 'Find your next Grail on the Relics ENS Market',
   openGraph: {
-    title: 'Marketplace | Grails',
-    description: 'Find your next Grail on the Grails ENS Market',
+    title: 'Marketplace | Relics',
+    description: 'Find your next Grail on the Relics ENS Market',
     siteName: 'Marketplace',
-    url: 'https://grails.app/marketplace',
-    images: [{ url: 'https://grails.app/previews/marketplace.jpeg' }],
+    url: 'https://relics.bid/marketplace',
+    images: [{ url: 'https://relics.bid/previews/marketplace.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marketplace | Grails',
-    description: 'Find your next Grail on the Grails ENS Market',
-    images: 'https://grails.app/previews/marketplace.jpeg',
+    title: 'Marketplace | Relics',
+    description: 'Find your next Grail on the Relics ENS Market',
+    images: 'https://relics.bid/previews/marketplace.jpeg',
   },
 }
 

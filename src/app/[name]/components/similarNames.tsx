@@ -19,8 +19,8 @@ const SimilarNames: React.FC<Props> = ({ name }) => {
   return (
     <div className='@[40rem]/app:border-tertiary bg-secondary pt-lg flex w-full flex-col gap-1 @[40rem]/app:rounded-lg @[40rem]/app:border-2 @[64rem]/app:gap-2'>
       <div className='px-lg @[80rem]/app:px-xl flex items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl'>Recommended</h2>
-        <span className='text-neutral text-lg'>✨ GrailsAI</span>
+        <h2 className='font-display text-3xl'>Recommended</h2>
+        <span className='text-neutral text-lg'>✨ RelicsAI</span>
       </div>
 
       <div className='relative w-full'>

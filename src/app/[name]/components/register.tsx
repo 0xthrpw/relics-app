@@ -127,7 +127,7 @@ const Register: React.FC<RegisterProps> = ({ nameDetails, registrationStatus }) 
     return (
       <div className='p-lg @[64rem]/app:p-xl bg-secondary @[40rem]/app:border-tertiary flex w-full flex-col gap-6 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
         <div className='flex flex-row items-center justify-between'>
-          <h3 className='font-sedan-sc text-3xl'>Grace Period</h3>
+          <h3 className='font-display text-3xl'>Grace Period</h3>
           <PrimaryButton
             onClick={() => {
               window.open(
@@ -156,7 +156,7 @@ const Register: React.FC<RegisterProps> = ({ nameDetails, registrationStatus }) 
 
     return (
       <div className='p-lg @[64rem]/app:p-xl bg-secondary @[40rem]/app:border-tertiary flex w-full flex-col @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
-        <h3 className='font-sedan-sc text-3xl'>Premium Registration</h3>
+        <h3 className='font-display text-3xl'>Premium Registration</h3>
         <div className='mt-4 flex w-full flex-row items-center justify-between gap-4'>
           <div className='flex flex-row items-center gap-2 text-2xl @[40rem]/app:text-3xl'>
             {isLoadingRentPrice ? (
@@ -236,7 +236,7 @@ const Register: React.FC<RegisterProps> = ({ nameDetails, registrationStatus }) 
 
   return (
     <div className='p-lg @[64rem]/app:p-xl bg-secondary @[40rem]/app:border-tertiary flex w-full flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
-      <h3 className='font-sedan-sc text-3xl'>Register Name</h3>
+      <h3 className='font-display text-3xl'>Register Name</h3>
       <div className='flex w-full flex-row items-center justify-between gap-4'>
         <div className='flex flex-row items-center gap-3'>
           {/* <Image src={ENS_LOGO} alt='ENS Logo' width={32} height={32} /> */}

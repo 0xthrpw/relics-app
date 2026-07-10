@@ -9,7 +9,7 @@ import Sold from 'public/icons/sold.svg'
 import Listed from 'public/icons/listed.svg'
 import Renewal from 'public/icons/renewal.svg'
 import OpenSea from 'public/logos/opensea.svg'
-import Grails from 'public/logo.svg'
+import Relics from 'public/logo.svg'
 import Vision from 'public/logos/vision.svg'
 import SnipeZone from 'public/logos/snipezone.png'
 import ENSTools from 'public/logos/enstools.png'
@@ -62,7 +62,7 @@ const Event: React.FC<EventProps> = ({ event, platform, timestamp, duration }) =
 
   const platformIcon = {
     opensea: OpenSea,
-    grails: Grails,
+    grails: Relics,
     vision: Vision,
     snipezone: SnipeZone,
     enstools: ENSTools,

@@ -6,17 +6,17 @@ export const metadata: Metadata = {
   title: 'Analytics',
   description: 'ENS market analytics - top listings, offers, and sales charts',
   openGraph: {
-    title: 'Analytics | Grails',
+    title: 'Analytics | Relics',
     description: 'ENS market analytics - top listings, offers, and sales charts',
     siteName: 'Analytics',
-    url: 'https://grails.app/analytics',
-    images: [{ url: 'https://grails.app/previews/marketplace.jpeg' }],
+    url: 'https://relics.bid/analytics',
+    images: [{ url: 'https://relics.bid/previews/marketplace.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Analytics | Grails',
+    title: 'Analytics | Relics',
     description: 'ENS market analytics - top listings, offers, and sales charts',
-    images: 'https://grails.app/previews/marketplace.jpeg',
+    images: 'https://relics.bid/previews/marketplace.jpeg',
   },
 }
 

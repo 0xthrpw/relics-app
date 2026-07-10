@@ -26,7 +26,7 @@ const Categories: React.FC<NameDetailsProps> = ({ nameDetails, nameDetailsIsLoad
         className='mb-2 flex cursor-pointer flex-row items-center justify-between transition-opacity hover:opacity-80'
         onClick={() => setIsCategoryOpen(!isCategoryOpen)}
       >
-        <h3 className='font-sedan-sc text-3xl'>Categories</h3>
+        <h3 className='font-display text-3xl'>Categories</h3>
         <div className='flex flex-row items-center gap-2'>
           {nameDetailsIsLoading ? (
             <LoadingCell height='20px' width='16px' />

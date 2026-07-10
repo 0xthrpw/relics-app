@@ -1,14 +1,14 @@
 {
-  "name": "Grails Market",
-  "short_name": "Grails",
-  "description": "Find, sell, buy, and manage ENS names on Grails Market.",
+  "name": "Relics",
+  "short_name": "Relics",
+  "description": "Find, sell, buy, and manage ENS names on Relics — Your ENS Market.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
-  "background_color": "#222222",
-  "theme_color": "#ffdfc0",
+  "background_color": "#191512",
+  "theme_color": "#d9b36a",
   "orientation": "portrait-primary",
   "categories": ["finance", "productivity", "utilities"],
   "lang": "en-US",
@@ -39,14 +39,14 @@
       "sizes": "800x411",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Grails home page"
+      "label": "Relics home page"
     },
     {
       "src": "/previews/explore.jpeg",
       "sizes": "800x411",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Explore ENS names on Grails"
+      "label": "Explore ENS names on Relics"
     },
     {
       "src": "/previews/categories.jpeg",

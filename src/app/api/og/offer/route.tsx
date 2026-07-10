@@ -290,7 +290,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #444444, #222222)',
+          background: 'radial-gradient(circle, #3a322a, #191512)',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -352,7 +352,7 @@ export async function GET(req: NextRequest) {
                 width: 560,
                 gap: 24,
                 overflow: 'hidden',
-                backgroundColor: '#444444',
+                backgroundColor: '#3a322a',
                 borderRadius: '0px 0px 20px 20px',
                 padding: categories.length === 1 ? '16px' : '10px',
               }}
@@ -407,7 +407,7 @@ export async function GET(req: NextRequest) {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
-            <div style={{ fontSize: 96, fontWeight: 700, color: '#ffdfc0' }}>{`${amount} ${currency}`}</div>
+            <div style={{ fontSize: 96, fontWeight: 700, color: '#d9b36a' }}>{`${amount} ${currency}`}</div>
             <img src={sourceLogo} alt='source' width={72} height={72} />
           </div>
           <div style={{ fontSize: 48, color: '#cccccc', paddingBottom: 8 }}>{`Ends: ${expiresFormatted}`}</div>
@@ -416,20 +416,20 @@ export async function GET(req: NextRequest) {
           <div
             style={{
               fontSize: 44,
-              color: '#ffdfc0',
+              color: '#d9b36a',
               maxWidth: 700,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
             }}
           >
-            {`grails.app/${beautifyName(name)}`}
+            {`relics.bid/${beautifyName(name)}`}
           </div>
           <img
             src={`${APP_URL}/your-ens-market-logo.svg`}
-            alt='Grails'
+            alt='Relics'
             width={380}
-            height={116}
+            height={114}
             style={{ marginTop: 24 }}
           />
         </div>

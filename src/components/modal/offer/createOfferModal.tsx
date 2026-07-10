@@ -178,7 +178,7 @@ const CreateOfferModal: React.FC<CreateOfferModalProps> = ({ onClose, domain }) 
           <ClaimPoap />
         ) : (
           <>
-            <h2 className='font-sedan-sc min-h-6 pb-2 text-center text-3xl'>Make Offer</h2>
+            <h2 className='font-display min-h-6 pb-2 text-center text-3xl'>Make Offer</h2>
 
             {success ? (
               <>
@@ -195,7 +195,7 @@ const CreateOfferModal: React.FC<CreateOfferModalProps> = ({ onClose, domain }) 
             ) : (
               <div className='space-y-3'>
                 <div className='flex w-full items-center justify-between gap-2'>
-                  <p className='font-sedan-sc text-2xl'>Name</p>
+                  <p className='font-display text-2xl'>Name</p>
                   <p className='max-w-2/3 truncate font-semibold'>{ensName}</p>
                 </div>
                 <div className='border-tertiary p-md flex flex-col gap-1 rounded-md border'>
@@ -212,8 +212,8 @@ const CreateOfferModal: React.FC<CreateOfferModalProps> = ({ onClose, domain }) 
                       className='p-md hover:bg-secondary flex w-full cursor-pointer items-center justify-between rounded-md transition-colors'
                     >
                       <div className='flex items-center gap-2'>
-                        <Image src={GrailsIcon} alt='Grails' width={24} height={24} />
-                        <p className='font-sedan-sc text-2xl'>Grails</p>
+                        <Image src={GrailsIcon} alt='Relics' width={24} height={24} />
+                        <p className='font-display text-2xl'>Relics</p>
                       </div>
                       <FilterSelector
                         onClick={() =>

@@ -141,7 +141,7 @@ const AcceptOfferModal: React.FC<AcceptOfferModalProps> = ({ offer, domain, onCl
 
       console.log('Parameters:', offer)
       // Read the conduitKey from the normalized order rather than the raw order_data.
-      // Grails offers nest under `protocol_data`, but Vision offers store the bare
+      // Relics offers nest under `protocol_data`, but Vision offers store the bare
       // `{ parameters, signature }` shape; parseStoredOrder handles both and defaults
       // a missing conduitKey to zero (which routes to the Seaport contract below).
       const parsedOrder = orderBuilder.parseStoredOrder(offer)
@@ -188,7 +188,7 @@ const AcceptOfferModal: React.FC<AcceptOfferModalProps> = ({ offer, domain, onCl
       const isWrapped = await checkIfWrapped(ensName)
       const nftContract = isWrapped ? ENS_NAME_WRAPPER_ADDRESS : ENS_REGISTRAR_ADDRESS
       // Read the conduitKey from the normalized order rather than the raw order_data.
-      // Grails offers nest under `protocol_data`, but Vision offers store the bare
+      // Relics offers nest under `protocol_data`, but Vision offers store the bare
       // `{ parameters, signature }` shape; parseStoredOrder handles both and defaults
       // a missing conduitKey to zero (which routes to the Seaport contract below).
       const parsedOrder = orderBuilder.parseStoredOrder(offer)
@@ -372,25 +372,25 @@ const AcceptOfferModal: React.FC<AcceptOfferModalProps> = ({ offer, domain, onCl
           <>
             <div className='mb-4 space-y-4'>
               <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>Name</p>
+                <p className='font-display text-xl'>Name</p>
                 <p className='text-xl font-semibold'>{ensName || `Token #${domain.tokenId}`}</p>
               </div>
 
               <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>From</p>
+                <p className='font-display text-xl'>From</p>
                 <div className='max-w-2/3 text-xl'>
                   <User address={offer.buyer_address} wrapperClassName='justify-start!' />
                 </div>
               </div>
 
               <div className='flex flex-row items-center justify-between rounded-lg'>
-                <p className='font-sedan-sc text-xl'>Expires</p>
+                <p className='font-display text-xl'>Expires</p>
                 <p className='text-xl'>{new Date(offer.expires_at).toLocaleDateString()}</p>
               </div>
 
               {gasEstimate && gasPrice && (
                 <div className='flex flex-row items-center justify-between rounded-lg'>
-                  <p className='font-sedan-sc text-xl'>Estimated Gas</p>
+                  <p className='font-display text-xl'>Estimated Gas</p>
                   <div className='text-right'>
                     <p className='text-xl font-semibold'>
                       ~
@@ -545,7 +545,7 @@ const AcceptOfferModal: React.FC<AcceptOfferModalProps> = ({ offer, domain, onCl
           <ClaimPoap />
         ) : (
           <>
-            <h2 className='font-sedan-sc mb-6 min-h-6 text-center text-3xl'>Accept Offer</h2>
+            <h2 className='font-display mb-6 min-h-6 text-center text-3xl'>Accept Offer</h2>
             {getModalContent()}
           </>
         )}

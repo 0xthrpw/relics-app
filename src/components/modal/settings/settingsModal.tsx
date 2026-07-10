@@ -44,7 +44,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className='flex min-h-6 items-center justify-center'>
-            <h2 className='font-sedan-sc text-foreground text-3xl'>Settings</h2>
+            <h2 className='font-display text-foreground text-3xl'>Settings</h2>
           </div>
           <p className='text-foreground/80 text-center text-base'>Sign in to manage your settings.</p>
           <div className='text-background'>
@@ -54,7 +54,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
               verifySignature={verify}
               onSignInSuccess={handleSignInSuccess}
               onSignInError={handleSignInError}
-              message='Grails Market wants you to sign in'
+              message='Relics wants you to sign in'
               onDisconnectedClick={() => openConnectModal?.()}
               darkMode={true}
               isSignedIn={false}
@@ -113,7 +113,7 @@ const SettingsModalContent: React.FC<SettingsModalProps & { userAddress: Address
       >
         {/* Header */}
         <div className='flex min-h-6 items-center justify-center'>
-          <h2 className='font-sedan-sc text-foreground text-3xl'>Settings</h2>
+          <h2 className='font-display text-foreground text-3xl'>Settings</h2>
           {/* <button onClick={onClose} className='hover:bg-primary/10 rounded-md p-1 transition-colors'>
             <Cross className='text-foreground h-4 w-4 cursor-pointer' />
           </button> */}
@@ -159,7 +159,7 @@ const SettingsModalContent: React.FC<SettingsModalProps & { userAddress: Address
           <div className='flex flex-col gap-2'>
             <div className='bg-secondary px-lg py-md flex flex-col gap-2 rounded-md'>
               <p className='text-md text-neutral font-medium'>
-                Your email is going to be used to send you notifications and updates from Grails.
+                Your email is going to be used to send you notifications and updates from Relics.
               </p>
             </div>
             <Input

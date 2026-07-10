@@ -197,7 +197,7 @@ export const SelectAllProvider: React.FC<SelectAllProviderProps> = ({
     // Set domains
     dispatch(setBulkSelectDomains(domains))
 
-    // Extract and set Grails listings
+    // Extract and set Relics listings
     const allListings: DomainListingType[] = []
     domains.forEach((domain) => {
       const grailsListings = domain.listings?.filter((listing) => listing.source === 'grails') || []

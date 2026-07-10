@@ -9,11 +9,11 @@ const PrivacyPolicy = () => {
         <div className='flex w-full flex-col gap-1'>
           <p className='font-semibold'>1. Who We Are</p>
           <p>
-            Grails is operated by Follow Protocol Foundation, a Delaware entity in the United States (“we,” “us,” or
+            Relics is operated by Follow Protocol Foundation, a Delaware entity in the United States (“we,” “us,” or
             “our”).
           </p>
           <p>
-            Grails is a web-based interface that allows users to discover, manage, and interact with Ethereum Name
+            Relics is a web-based interface that allows users to discover, manage, and interact with Ethereum Name
             Service (“ENS”) names, among other things.
           </p>
         </div>
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
             <li>Basic profile or preference data (such as watchlists or saved items)</li>
             <li>Other settings, profile data, messages, or comments on the webapp</li>
             <li>Usage and Analytics Information</li>
-            <li>Analytics data related to how users interact with the Grails website</li>
+            <li>Analytics data related to how users interact with the Relics website</li>
             <li>Cookies, local storage, or similar technologies used for functionality, analytics, and performance</li>
           </ul>
         </div>
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
           <p className='font-semibold'>3. How We Use Information</p>
           <p>We use collected information to:</p>
           <ul className='list-inside list-disc'>
-            <li>Provide and operate the Grails service</li>
+            <li>Provide and operate the Relics service</li>
             <li>Enable ENS name discovery, management, and market functionality</li>
             <li>Improve performance, reliability, and security</li>
             <li>Monitor and prevent abuse, fraud, or unlawful activity</li>
@@ -55,7 +55,7 @@ const PrivacyPolicy = () => {
           <p className='font-semibold'>4. Blockchain Data</p>
           <p>
             Blockchain transactions and ENS data are public by nature and not controlled by us. Information recorded on
-            public blockchains may be permanently accessible and cannot be modified or deleted by Grails.
+            public blockchains may be permanently accessible and cannot be modified or deleted by Relics.
           </p>
         </div>
 
@@ -63,9 +63,9 @@ const PrivacyPolicy = () => {
           <p className='font-semibold'>5. Sharing of Information</p>
           <p>We may share information:</p>
           <ul className='list-inside list-disc'>
-            <li>With infrastructure, analytics, or service providers who help operate Grails</li>
+            <li>With infrastructure, analytics, or service providers who help operate Relics</li>
             <li>To comply with legal obligations or lawful requests</li>
-            <li>To protect the rights, safety, or security of Grails, our users, or others</li>
+            <li>To protect the rights, safety, or security of Relics, our users, or others</li>
             <li>If our data practices change in the future, this Privacy Policy will be updated accordingly</li>
           </ul>
         </div>
@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
         <div className='flex w-full flex-col gap-1'>
           <p className='font-semibold'>7. Children&quot;s Privacy</p>
           <p>
-            Grails is not intended for children under the age of 13, and we do not knowingly collect personal
+            Relics is not intended for children under the age of 13, and we do not knowingly collect personal
             information from children.
           </p>
         </div>

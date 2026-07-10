@@ -31,7 +31,7 @@ const ProfileSemanticSummary = ({ user, profile }: { user: string; profile?: Pro
     >
       <div className='mx-auto flex w-full max-w-7xl flex-col gap-3 md:flex-row md:items-end md:justify-between'>
         <div className='min-w-0'>
-          <p className='text-neutral text-lg font-medium'>Grails profile</p>
+          <p className='text-neutral text-lg font-medium'>Relics profile</p>
           <h1 id='profile-summary-title' className='truncate text-3xl font-bold md:text-4xl'>
             {displayName}
           </h1>
@@ -104,8 +104,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   const avatarResponse = ensAvatar && isLinkValid(ensAvatar) ? await fetchAvatar(ensAvatar) : false
 
-  const pageUrl = `https://grails.app/profile/${user}`
-  const ogImageUrl = `https://grails.app/api/og/profile?user=${user}`
+  const pageUrl = `https://relics.bid/profile/${user}`
+  const ogImageUrl = `https://relics.bid/api/og/profile?user=${user}`
 
   return {
     title: `${displayUser}`,

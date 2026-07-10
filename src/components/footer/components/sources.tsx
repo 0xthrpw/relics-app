@@ -3,22 +3,7 @@ import Link from 'next/link'
 const footerSources = [
   {
     text: 'GitHub',
-    href: 'https://github.com/grailsmarket',
-    target: '_blank',
-  },
-  {
-    text: 'Discord',
-    href: 'https://discord.com/invite/ZUyG3mSXFD',
-    target: '_blank',
-  },
-  {
-    text: 'Twitter',
-    href: 'https://twitter.com/grailsmarket',
-    target: '_blank',
-  },
-  {
-    text: 'Grails CLI',
-    href: 'https://github.com/grailsmarket/cli',
+    href: 'https://github.com/0xthrpw/relics-app',
     target: '_blank',
   },
 ]

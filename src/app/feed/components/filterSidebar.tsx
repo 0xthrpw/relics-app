@@ -21,7 +21,7 @@ export type FeedPlatformFilter = 'all' | 'grails' | 'opensea'
 
 const PLATFORM_FILTERS: { label: string; value: FeedPlatformFilter }[] = [
   { label: 'All', value: 'all' },
-  { label: 'Grails', value: 'grails' },
+  { label: 'Relics', value: 'grails' },
   { label: 'Opensea', value: 'opensea' },
 ]
 

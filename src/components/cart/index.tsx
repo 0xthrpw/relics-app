@@ -84,7 +84,7 @@ const Cart = () => {
         <div className='flex h-[calc(100vh-54px)] flex-col gap-4 overflow-y-scroll pb-4'>
           <div className='px-lg border-tertiary flex min-h-14 flex-row items-center justify-between border-b-2 md:min-h-16'>
             <div className='flex items-center gap-2'>
-              <h2 className='font-sedan-sc text-3xl'>Cart</h2>
+              <h2 className='font-display text-3xl'>Cart</h2>
               <Label label={purchaseDomains.length + registerDomains.length + offerDomains.length} />
             </div>
             <Cross className='h-4 w-4 cursor-pointer hover:opacity-80' onClick={() => setIsCartOpen(false)} />
@@ -92,7 +92,7 @@ const Cart = () => {
           {!registeredDomainsEmpty && (
             <div className='px-lg flex flex-col gap-4'>
               <div className='flex items-center gap-2'>
-                <h3 className='font-sedan-sc text-2xl'>Purchase</h3>
+                <h3 className='font-display text-2xl'>Purchase</h3>
                 <Label label={purchaseDomains.length} />
               </div>
               <div className='flex flex-col gap-4'>
@@ -105,7 +105,7 @@ const Cart = () => {
           {!registerDomainsEmpty && (
             <div className='px-lg border-tertiary flex flex-col gap-4 border-t-2 pt-4'>
               <div className='flex items-center gap-2'>
-                <h3 className='font-sedan-sc text-2xl'>Register</h3>
+                <h3 className='font-display text-2xl'>Register</h3>
                 <Label label={registerDomains.length} />
               </div>
               <div className='flex flex-col gap-4'>
@@ -129,7 +129,7 @@ const Cart = () => {
           {!offerDomainsEmpty && (
             <div className='px-lg border-tertiary flex flex-col gap-4 border-t-2 pt-4'>
               <div className='flex items-center gap-2'>
-                <h3 className='font-sedan-sc text-2xl'>Offer</h3>
+                <h3 className='font-display text-2xl'>Offer</h3>
                 <Label label={offerDomains.length} />
               </div>
               <div className='flex flex-col gap-4'>
@@ -139,7 +139,7 @@ const Cart = () => {
               </div>
             </div>
           )}
-          {cartIsEmpty && <NoResults label='No Grails in your cart' height='calc(100vh - 110px)' />}
+          {cartIsEmpty && <NoResults label='No Relics in your cart' height='calc(100vh - 110px)' />}
         </div>
         <div className='border-tertiary bg-background px-md md:px-lg absolute right-0 bottom-0 z-20 flex h-16 w-full flex-row items-center justify-end rounded-b-lg border-t-2 lg:justify-between'>
           <div className='flex w-fit flex-row gap-x-2'>

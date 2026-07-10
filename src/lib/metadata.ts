@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
-export const metadataBaseUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grails.app')
+export const metadataBaseUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://relics.bid')
 
-export const metadataTitle = 'Grails: ENS Manager & Market'
-export const metadataSiteName = 'Grails Market'
-export const metadataDescription = 'Your ENS Market. Find, sell, buy, and manage your ENS names on Grails Market.'
-export const metadataThemeColor = '#ffdfc0'
+export const metadataTitle = 'Relics: ENS Manager & Market'
+export const metadataSiteName = 'Relics'
+export const metadataDescription = 'Your ENS Market. Find, sell, buy, and manage your ENS names on Relics.'
+export const metadataThemeColor = '#d9b36a'
 
 // Relative URLs: icons resolve against the page origin in the browser, and
 // og/twitter images are absolutized by Next via metadataBase — so every asset
@@ -42,8 +42,6 @@ export const sharedMetadataOpenGraph: Metadata['openGraph'] = {
 
 export const sharedMetadataTwitter: Metadata['twitter'] = {
   card: 'summary_large_image',
-  site: '@grailsmarket',
-  creator: '@grailsmarket',
   description: metadataDescription,
   images: [
     {
@@ -56,19 +54,19 @@ export const sharedMetadata: Metadata = {
   metadataBase: metadataBaseUrl,
   title: {
     default: metadataTitle,
-    template: '%s | Grails',
+    template: '%s | Relics',
   },
   description: metadataDescription,
   applicationName: metadataSiteName,
   manifest: '/manifest.json',
   keywords: [
-    'Grails',
-    'Grails Market',
-    'Grails ENS Market',
-    'Grails ENS',
-    'Grails App',
-    'Grails App Market',
-    'Grails App Market',
+    'Relics',
+    'Relics Market',
+    'Relics ENS Market',
+    'Relics ENS',
+    'relics.bid',
+    'ENS marketplace',
+    'ENS names',
   ],
   icons: sharedMetadataIcons,
   openGraph: sharedMetadataOpenGraph,

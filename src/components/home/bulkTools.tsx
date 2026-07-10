@@ -81,9 +81,7 @@ const BulkTools = () => {
     <div className='flex w-full flex-col justify-between gap-8 @[80rem]/app:flex-row'>
       <div className='flex w-full flex-col items-center gap-7 @[64rem]/app:items-start'>
         <div className='flex flex-col gap-4'>
-          <h2 className='font-sedan-sc text-center text-5xl @[48rem]/app:text-6xl @[64rem]/app:text-left'>
-            Bulk Tools
-          </h2>
+          <h2 className='font-display text-center text-5xl @[48rem]/app:text-6xl @[64rem]/app:text-left'>Bulk Tools</h2>
           <p className='text-center font-semibold @[40rem]/app:text-2xl @[64rem]/app:text-left'>
             Save gas and time. For serious domainers.
           </p>

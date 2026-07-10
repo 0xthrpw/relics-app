@@ -5,19 +5,19 @@ import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: `Categories`,
-  description: `Browse all categories on Grails`,
+  description: `Browse all categories on Relics`,
   openGraph: {
-    title: `Categories | Grails`,
+    title: `Categories | Relics`,
     siteName: `Categories`,
-    description: `Browse all ENS categories on Grails`,
-    url: `https://grails.app/categories`,
-    images: [{ url: `https://grails.app/previews/categories.jpeg` }],
+    description: `Browse all ENS categories on Relics`,
+    url: `https://relics.bid/categories`,
+    images: [{ url: `https://relics.bid/previews/categories.jpeg` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Categories | Grails`,
-    description: `Browse all ENS categories on Grails`,
-    images: `https://grails.app/previews/categories.jpeg`,
+    title: `Categories | Relics`,
+    description: `Browse all ENS categories on Relics`,
+    images: `https://relics.bid/previews/categories.jpeg`,
   },
 }
 

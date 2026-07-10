@@ -72,7 +72,7 @@ const CancelOfferModal: React.FC<CancelOfferModalProps> = ({ onClose, name, offe
         className='border-tertiary bg-background relative flex max-h-[calc(100dvh-80px)] w-full flex-col gap-2 overflow-y-auto border-t p-4 transition-all duration-300 md:max-w-md md:rounded-md md:border-2 starting:translate-y-full md:starting:translate-y-0'
       >
         <div className='z-10 mb-4 flex min-h-6 items-center justify-center'>
-          <h2 className='font-sedan-sc text-3xl'>Cancel Offer</h2>
+          <h2 className='font-display text-3xl'>Cancel Offer</h2>
         </div>
 
         {status === 'success' ? (
@@ -97,11 +97,11 @@ const CancelOfferModal: React.FC<CancelOfferModalProps> = ({ onClose, name, offe
           <>
             <div className='flex flex-col gap-2'>
               <div className='flex justify-between'>
-                <p className='font-sedan-sc text-label text-xl'>Name</p>
+                <p className='font-display text-label text-xl'>Name</p>
                 <p className='max-w-2/3 truncate text-lg font-medium'>{ensName}</p>
               </div>
               <div className='flex justify-between'>
-                <p className='font-sedan-sc text-label text-xl'>Price</p>
+                <p className='font-display text-label text-xl'>Price</p>
                 <Price
                   price={offer.offer_amount_wei}
                   currencyAddress={offer.currency_address}
@@ -111,7 +111,7 @@ const CancelOfferModal: React.FC<CancelOfferModalProps> = ({ onClose, name, offe
                 />
               </div>
               <div className='flex justify-between'>
-                <p className='font-sedan-sc text-label text-xl'>Expires</p>
+                <p className='font-display text-label text-xl'>Expires</p>
                 <p className='max-w-2/3 truncate text-lg font-medium'>{formatExpiryDate(offer.expires_at)}</p>
               </div>
             </div>

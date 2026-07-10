@@ -68,7 +68,7 @@ const Listings: React.FC<ListingsProps> = ({ domain, listings, listingsLoading }
   return (
     <div className='p-lg @[64rem]/app:px-xl @[40rem]/app:border-tertiary bg-secondary flex w-full flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
       <div className='flex w-full items-center justify-between'>
-        <h3 className='font-sedan-sc text-3xl'>Listings</h3>
+        <h3 className='font-display text-3xl'>Listings</h3>
         {isMyDomain && (
           <PrimaryButton onClick={openMakeListingModal}>
             <p>Add Listing +</p>

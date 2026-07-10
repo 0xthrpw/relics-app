@@ -79,7 +79,7 @@ const NewChatView: React.FC = () => {
   /**
    * We always send the resolved address (not the raw ENS string) to the backend.
    * The backend's address path auto-creates a stub `users` row when a recipient
-   * has never signed in to Grails, while the ENS-string path 404s if the name
+   * has never signed in to Relics, while the ENS-string path 404s if the name
    * isn't tracked in our `ens_names` table. Sending the address makes "first
    * contact" with any wallet just work.
    */

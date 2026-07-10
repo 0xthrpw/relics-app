@@ -1,4 +1,4 @@
-/** Fixed UUID of the global "Grails Chat" room. */
+/** Fixed UUID of the global "Relics Chat" room. */
 export const GLOBAL_CHAT_ID = '00000000-0000-0000-0000-000000000001'
 
 /** Max message length (server-enforced); mirrored by the composer and inline editor. */

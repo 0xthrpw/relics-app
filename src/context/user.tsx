@@ -135,7 +135,7 @@ export const UserProvider: React.FC<Props> = ({ children }) => {
     verifySignature: verify,
     onSignInSuccess: handleSignInSuccess,
     onSignInError: handleSignInError,
-    message: 'Grails Market wants you to sign in',
+    message: 'Relics wants you to sign in',
     getNonce: handleGetNonce,
     expirationTime: DAY_IN_SECONDS * 1000, // day in milliseconds
   })

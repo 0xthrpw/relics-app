@@ -143,7 +143,7 @@ export function useSeaportClient() {
             order.marketplace = 'grails'
           })
 
-          // Determine if Grails listing should be brokered
+          // Determine if Relics listing should be brokered
           const isBrokeredListing = params.brokerAddress && params.brokerFeeBps
 
           // Submit OpenSea order (always uses regular endpoint)
@@ -160,7 +160,7 @@ export function useSeaportClient() {
             }),
           })
 
-          // Submit Grails order (use brokered-listings if broker specified)
+          // Submit Relics order (use brokered-listings if broker specified)
           let grailsResponsePromise: Promise<Response>
 
           if (isBrokeredListing) {
@@ -235,7 +235,7 @@ export function useSeaportClient() {
             }
             if (!grailsResponse.ok) {
               const grailsError = await grailsResponse.json()
-              errors.push('Grails: ' + (grailsError.error || 'Unknown error'))
+              errors.push('Relics: ' + (grailsError.error || 'Unknown error'))
             }
 
             params.setError?.('Failed to save orders: ' + errors.join(', '))
@@ -260,7 +260,7 @@ export function useSeaportClient() {
         // Single marketplace case
         const formattedOrders = seaportClient.formatOrderForStorage(orders as OrderWithCounter[])
 
-        // Determine if this is a brokered listing (broker specified + Grails marketplace)
+        // Determine if this is a brokered listing (broker specified + Relics marketplace)
         const isBrokeredListing = params.brokerAddress && params.brokerFeeBps && params.marketplace.includes('grails')
 
         if (isBrokeredListing) {
@@ -412,7 +412,7 @@ export function useSeaportClient() {
             }
           }
 
-          // Here we handle creating the offer for the Grails marketplace
+          // Here we handle creating the offer for the Relics marketplace
           console.log('Creating offer for marketplace:', marketplace)
           const formattedOrder = seaportClient.formatOrderForStorage([order])[0]
           const response = await createOfferApi({
@@ -530,9 +530,9 @@ export function useSeaportClient() {
 
         const { requiresOnChainCancellation, orders, message } = await fetchResponse.json()
 
-        // If no on-chain cancellation is required, Grails listings were already cancelled in the database
+        // If no on-chain cancellation is required, Relics listings were already cancelled in the database
         if (!requiresOnChainCancellation) {
-          console.log('Grails listings cancelled successfully:', message)
+          console.log('Relics listings cancelled successfully:', message)
           return { success: true, message }
         }
 

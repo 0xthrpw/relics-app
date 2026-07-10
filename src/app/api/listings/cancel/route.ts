@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
 
     const listings = await Promise.all(listingDetailsPromises)
 
-    // Separate Grails and OpenSea listings
+    // Separate Relics and OpenSea listings
     const grailsListingIds: number[] = []
     const openSeaOrdersToCancel: any[] = []
 
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       const source = listing.source || 'grails'
 
       if (source === 'grails') {
-        // Grails listings can be cancelled directly in the database
+        // Relics listings can be cancelled directly in the database
         grailsListingIds.push(listingIds[index])
       } else if (source === 'opensea') {
         // OpenSea listings require on-chain cancellation
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    // Cancel Grails listings directly in database
+    // Cancel Relics listings directly in database
     if (grailsListingIds.length > 0) {
       const cancelPromises = grailsListingIds.map(async (listingId: number) => {
         const response = await fetch(`${API_URL}/listings/${listingId}`, {
@@ -136,10 +136,10 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // All listings were Grails listings and have been cancelled
+    // All listings were Relics listings and have been cancelled
     return NextResponse.json({
       requiresOnChainCancellation: false,
-      message: 'All Grails listings cancelled successfully',
+      message: 'All Relics listings cancelled successfully',
       listingIds: grailsListingIds,
     })
   } catch (error: any) {

@@ -24,11 +24,11 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   return {
     title: `${name}`,
-    description: `${name} - Available on Grails`,
+    description: `${name} - Available on Relics`,
     openGraph: {
       title: `${name}`,
-      siteName: 'Grails',
-      description: `${name} - Available on Grails`,
+      siteName: 'Relics',
+      description: `${name} - Available on Relics`,
       url: `${APP_URL}/${encodeURIComponent(name)}`,
       images: [
         {
@@ -43,9 +43,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: `${name}`,
-      description: `${name} - Available on Grails`,
-      creator: '@grailsmarket',
-      site: '@grailsmarket',
+      description: `${name} - Available on Relics`,
     },
   }
 }

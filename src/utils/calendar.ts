@@ -85,11 +85,11 @@ export const downloadIcsFile = (event: CalendarEvent): void => {
   const reminderMinutes = event.reminderMinutes || 60
 
   // Generate a unique ID for the event
-  const uid = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}@grails.market`
+  const uid = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}@relics.bid`
 
   const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Grails Market//Premium Alert//EN
+PRODID:-//Relics//Premium Alert//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT

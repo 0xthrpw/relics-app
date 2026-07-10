@@ -198,7 +198,7 @@ const ServerPrimaryDetails = ({
 const ServerCategories = ({ nameDetails }: { nameDetails?: MarketplaceDomainType | null }) => (
   <section className='bg-secondary border-tertiary p-lg flex flex-col gap-2 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
     <div className='mb-2 flex flex-row items-center justify-between'>
-      <h2 className='font-sedan-sc text-3xl'>Categories</h2>
+      <h2 className='font-display text-3xl'>Categories</h2>
       <p className='text-xl font-bold'>{nameDetails?.clubs?.length || 0}</p>
     </div>
     {nameDetails?.clubs && nameDetails.clubs.length > 0 ? (
@@ -245,7 +245,7 @@ const ServerCategories = ({ nameDetails }: { nameDetails?: MarketplaceDomainType
 const ServerMetadata = ({ name, metadata = [] }: { name: string; metadata?: MetadataType[] }) => (
   <section className='bg-secondary border-tertiary p-lg flex flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
     <div className='flex flex-row items-center justify-between'>
-      <h2 className='font-sedan-sc text-3xl'>Records</h2>
+      <h2 className='font-display text-3xl'>Records</h2>
       <p className='text-xl font-bold'>{metadata.length}</p>
     </div>
     {metadata.length > 0 ? (
@@ -269,7 +269,7 @@ const ServerMetadata = ({ name, metadata = [] }: { name: string; metadata?: Meta
 const ServerRoles = ({ roles }: { roles?: RolesType | null }) => (
   <section className='bg-secondary border-tertiary p-lg flex flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
     <div className='flex flex-row items-center justify-between'>
-      <h2 className='font-sedan-sc text-3xl'>Roles</h2>
+      <h2 className='font-display text-3xl'>Roles</h2>
     </div>
     {roles ? (
       <div className='grid grid-cols-1 gap-4 @[40rem]/app:grid-cols-2'>
@@ -308,7 +308,7 @@ const ServerSecondaryDetails = ({
   return (
     <section className='bg-secondary border-tertiary p-lg flex flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
       <div className='flex flex-row items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl'>Details</h2>
+        <h2 className='font-display text-3xl'>Details</h2>
       </div>
       <div className='grid grid-cols-1 gap-4 @[40rem]/app:grid-cols-2'>
         {rows.map((row) => (
@@ -346,7 +346,7 @@ const ServerListings = ({
   return (
     <section className='p-lg @[64rem]/app:px-xl @[40rem]/app:border-tertiary bg-secondary flex w-full flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
       <div className='flex w-full items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl'>Listings</h2>
+        <h2 className='font-display text-3xl'>Listings</h2>
       </div>
       {sortedListings.slice(0, 2).map((listing) => (
         <ServerListingRow key={listing.id} listing={listing} domain={domain} />
@@ -413,7 +413,7 @@ const ServerOffers = ({ domain, offers }: { domain?: MarketplaceDomainType | nul
   return (
     <section className='p-lg @[64rem]/app:px-xl @[40rem]/app:border-tertiary bg-secondary flex w-full flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
       <div className='flex w-full items-center justify-between'>
-        <h2 className='font-sedan-sc text-3xl'>Offers</h2>
+        <h2 className='font-display text-3xl'>Offers</h2>
       </div>
       {sortedOffers.slice(0, 2).map((offer) => (
         <ServerOfferRow key={offer.id} offer={offer} domain={domain} />
@@ -466,7 +466,7 @@ const ServerRegisterSummary = ({
 }) => (
   <section className='p-lg @[64rem]/app:p-xl bg-secondary @[40rem]/app:border-tertiary flex w-full flex-col gap-4 @[40rem]/app:rounded-lg @[40rem]/app:border-2'>
     <div className='flex flex-row items-center justify-between'>
-      <h2 className='font-sedan-sc text-3xl'>
+      <h2 className='font-display text-3xl'>
         {registrationStatus === UNREGISTERED ? 'Register' : `${registrationStatus} Registration`}
       </h2>
     </div>
@@ -480,7 +480,7 @@ const ServerRegisterSummary = ({
 const ServerClientOnlyPlaceholder = ({ title, description }: { title: string; description: string }) => (
   <section className='@[40rem]/app:border-tertiary bg-secondary pt-lg flex w-full flex-col gap-1 @[40rem]/app:rounded-lg @[40rem]/app:border-2 @[64rem]/app:gap-2'>
     <div className='px-lg @[80rem]/app:px-xl flex items-center justify-between'>
-      <h2 className='font-sedan-sc text-3xl'>{title}</h2>
+      <h2 className='font-display text-3xl'>{title}</h2>
     </div>
     <div className='py-2xl flex w-full flex-col items-center justify-center gap-3 px-4 text-center'>
       <p className='text-neutral text-lg'>{description}</p>

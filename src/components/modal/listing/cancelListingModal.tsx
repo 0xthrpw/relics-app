@@ -68,7 +68,7 @@ const CancelListingModal: React.FC<CancelListingModalProps> = ({ onClose, listin
         className='border-tertiary bg-background p-lg sm:p-xl relative flex max-h-[calc(100dvh-80px)] w-full flex-col gap-2 overflow-y-auto border-t transition-all duration-300 md:max-w-md md:rounded-md md:border-2 starting:translate-y-full md:starting:translate-y-0'
       >
         <div className='z-10 mb-4 flex min-h-6 items-center justify-center'>
-          <h2 className='font-sedan-sc min-h-6 text-3xl'>Cancel Listing</h2>
+          <h2 className='font-display min-h-6 text-3xl'>Cancel Listing</h2>
         </div>
 
         {status === 'success' ? (
@@ -91,7 +91,7 @@ const CancelListingModal: React.FC<CancelListingModalProps> = ({ onClose, listin
             <div className='px-lg py-md bg-secondary flex max-h-[300px] flex-col overflow-y-auto rounded-lg'>
               {listings.length > 1 && (
                 <div className='flex justify-between border-b border-b-white/30 py-2'>
-                  <p className='font-sedan-sc text-label text-xl'>Names</p>
+                  <p className='font-display text-label text-xl'>Names</p>
                   <p className='max-w-2/3 truncate text-xl font-bold'>{listings.length}</p>
                 </div>
               )}
@@ -101,11 +101,11 @@ const CancelListingModal: React.FC<CancelListingModalProps> = ({ onClose, listin
                   className={cn('flex flex-col gap-2 py-2', index > 0 && 'border-t border-white/30')}
                 >
                   <div className='flex justify-between'>
-                    <p className='font-sedan-sc text-label text-xl'>Name</p>
+                    <p className='font-display text-label text-xl'>Name</p>
                     <p className='max-w-2/3 truncate text-xl font-bold'>{beautifyName(listing.name)}</p>
                   </div>
                   <div className='flex justify-between'>
-                    <p className='font-sedan-sc text-label text-xl'>Price</p>
+                    <p className='font-display text-label text-xl'>Price</p>
                     <Price
                       price={listing.price}
                       currencyAddress={listing.currency as Address}
@@ -116,11 +116,11 @@ const CancelListingModal: React.FC<CancelListingModalProps> = ({ onClose, listin
                     />
                   </div>
                   <div className='flex justify-between'>
-                    <p className='font-sedan-sc text-label text-xl'>Expires</p>
+                    <p className='font-display text-label text-xl'>Expires</p>
                     <p className='max-w-2/3 truncate text-lg font-medium'>{formatExpiryDate(listing.expires)}</p>
                   </div>
                   <div className='flex justify-between'>
-                    <p className='font-sedan-sc text-label text-xl'>Marketplace</p>
+                    <p className='font-display text-label text-xl'>Marketplace</p>
                     <div className='flex items-center gap-1'>
                       <Image
                         src={SOURCE_ICONS[listing.source as keyof typeof SOURCE_ICONS]}

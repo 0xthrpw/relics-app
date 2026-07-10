@@ -36,18 +36,18 @@ const Verify = () => {
 
   return (
     <main className='px-lg flex min-h-[calc(100dvh-56px)] w-full flex-col items-center justify-center gap-4 text-center md:min-h-[calc(100dvh-78px)]'>
-      <h1 className='font-sedan-sc text-4xl'>Verify Email</h1>
+      <h1 className='font-display text-4xl'>Verify Email</h1>
       {isVerifyingEmail ? (
         <div className='flex w-full flex-col items-center justify-center gap-4 pt-4'>
           <div className='border-primary inline-block h-12 w-12 animate-spin rounded-full border-b-2'></div>
-          <p className='text-neutral'>Verifying your email address on Grails...</p>
+          <p className='text-neutral'>Verifying your email address on Relics...</p>
         </div>
       ) : isSuccess ? (
         <p className='text-green-500'>Email verified successfully! Redirecting to home page...</p>
       ) : verifyEmailError ? (
         <p className='text-red-500'>Failed to verify email</p>
       ) : (
-        <p className='text-neutral'>Please verify your email address on Grails</p>
+        <p className='text-neutral'>Please verify your email address on Relics</p>
       )}
       {isSuccess ? (
         <SecondaryButton onClick={() => router.push('/')} className='mt-2 w-full max-w-64'>

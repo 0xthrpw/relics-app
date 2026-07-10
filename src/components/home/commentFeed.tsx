@@ -44,7 +44,7 @@ const HomeCommentFeed = () => {
   return (
     <div className='flex w-full flex-col gap-1 @[40rem]/app:gap-2 @[64rem]/app:flex-row @[64rem]/app:gap-10'>
       <div className='p-md @[64rem]/app:px-lg flex w-full items-center justify-between @[64rem]/app:w-3/5 @[64rem]/app:flex-col @[64rem]/app:items-start @[64rem]/app:justify-start @[64rem]/app:gap-8 @[64rem]/app:pt-12'>
-        <h2 className='font-sedan-sc text-3xl font-medium @[40rem]/app:text-4xl @[48rem]/app:text-5xl @[64rem]/app:text-6xl'>
+        <h2 className='font-display text-3xl font-medium @[40rem]/app:text-4xl @[48rem]/app:text-5xl @[64rem]/app:text-6xl'>
           Comment Feed
         </h2>
         <ul className='hidden list-inside list-disc space-y-2 @[64rem]/app:block'>

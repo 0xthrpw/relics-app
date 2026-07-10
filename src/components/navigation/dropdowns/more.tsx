@@ -58,7 +58,7 @@ const More: React.FC<MoreProps> = ({ setDropdownOption, previousDropdownOption }
     },
     {
       title: 'Feed',
-      description: 'Live ENS comments across Grails.',
+      description: 'Live ENS comments across Relics.',
       icon: <Image src={chatIcon} alt='Feed' width={24} height={24} />,
       href: '/feed',
       onClick: () => setDropdownOption(null),

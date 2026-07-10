@@ -16,19 +16,19 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   return {
     title: `${categoryLabel} Category`,
-    description: `${categoryLabel} Category on Grails Marketplace`,
+    description: `${categoryLabel} Category on Relics Marketplace`,
     openGraph: {
-      title: `${categoryLabel} Category | Grails`,
+      title: `${categoryLabel} Category | Relics`,
       siteName: `${categoryLabel} Category`,
-      description: `${categoryLabel} Category on Grails Marketplace`,
-      url: `https://grails.app/categories/${category}`,
-      images: [{ url: `https://grails.app/api/og/category?category=${category}` }],
+      description: `${categoryLabel} Category on Relics Marketplace`,
+      url: `https://relics.bid/categories/${category}`,
+      images: [{ url: `https://relics.bid/api/og/category?category=${category}` }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${categoryLabel} Category | Grails`,
-      description: `${categoryLabel} Category on Grails Marketplace`,
-      images: `https://grails.app/api/og/category?category=${category}`,
+      title: `${categoryLabel} Category | Relics`,
+      description: `${categoryLabel} Category on Relics Marketplace`,
+      images: `https://relics.bid/api/og/category?category=${category}`,
     },
   }
 }

@@ -19,13 +19,13 @@ const size = {
 }
 
 // Palette (hardcoded — Satori can't read the app's global CSS variables).
-const PRIMARY = '#ffdfc0'
+const PRIMARY = '#d9b36a'
 const PRIMARY_RGB = '255,223,192'
 const NEUTRAL_RGB = '170,170,170'
 const FOREGROUND = '#f4f4f4'
-const NEUTRAL = '#aaaaaa'
-const CARD_BG = '#333333'
-const CARD_BORDER = '#444444'
+const NEUTRAL = '#a89a88'
+const CARD_BG = '#262019'
+const CARD_BORDER = '#3a322a'
 const PILL_BG = '#3c3c3c'
 const TRACK_BG = 'rgba(255,255,255,0.10)'
 
@@ -451,7 +451,7 @@ export async function GET(req: NextRequest) {
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: 'rgba(255,255,255,0.8)',
-              color: '#222222',
+              color: '#191512',
               fontSize: 18,
               fontWeight: 700,
               textTransform: 'uppercase',
@@ -463,7 +463,7 @@ export async function GET(req: NextRequest) {
             beta
           </div>
         </div>
-        <span style={{ fontSize: 26, color: NEUTRAL }}>✨ GrailsAI</span>
+        <span style={{ fontSize: 26, color: NEUTRAL }}>✨ RelicsAI</span>
       </div>
     )
 
@@ -478,8 +478,8 @@ export async function GET(req: NextRequest) {
           gap: 14,
         }}
       >
-        {logoDataUri && <img src={logoDataUri} alt='Grails' width={250} height={77} />}
-        <span style={{ fontSize: 30, color: PRIMARY }}>{`grails.app/${beautified}`}</span>
+        {logoDataUri && <img src={logoDataUri} alt='Relics' width={250} height={66} />}
+        <span style={{ fontSize: 30, color: PRIMARY }}>{`relics.bid/${beautified}`}</span>
       </div>
     )
 
@@ -518,7 +518,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #444444, #222222)',
+          background: 'radial-gradient(circle, #3a322a, #191512)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

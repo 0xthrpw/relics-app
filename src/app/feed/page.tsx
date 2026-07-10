@@ -7,19 +7,19 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Comments Feed',
-  description: 'Live ENS comments feed across Grails',
+  description: 'Live ENS comments feed across Relics',
   openGraph: {
-    title: 'Comments Feed | Grails',
-    description: 'Live ENS comments feed across Grails',
-    siteName: 'Grails',
-    url: 'https://grails.app/feed',
-    images: [{ url: 'https://grails.app/previews/marketplace.jpeg' }],
+    title: 'Comments Feed | Relics',
+    description: 'Live ENS comments feed across Relics',
+    siteName: 'Relics',
+    url: 'https://relics.bid/feed',
+    images: [{ url: 'https://relics.bid/previews/marketplace.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Comments Feed | Grails',
-    description: 'Live ENS comments feed across Grails',
-    images: 'https://grails.app/previews/marketplace.jpeg',
+    title: 'Comments Feed | Relics',
+    description: 'Live ENS comments feed across Relics',
+    images: 'https://relics.bid/previews/marketplace.jpeg',
   },
 }
 

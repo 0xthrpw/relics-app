@@ -875,11 +875,11 @@ export class SeaportClient {
       operatorToApprove = OPENSEA_CONDUIT_ADDRESS
       approvalTarget = 'OpenSea conduit'
     } else if (params.marketplace === 'grails') {
-      // Force using the conduit for Grails marketplace
+      // Force using the conduit for Relics marketplace
       // The conduit at 0x73E9cD721a79C208E2F944910c27196307a2a05D is deployed and ready
-      operatorToApprove = MARKETPLACE_CONDUIT_ADDRESS // Always use conduit for Grails
-      approvalTarget = 'Grails conduit'
-      // console.log('Forcing Grails conduit usage:', MARKETPLACE_CONDUIT_ADDRESS)
+      operatorToApprove = MARKETPLACE_CONDUIT_ADDRESS // Always use conduit for Relics
+      approvalTarget = 'Relics conduit'
+      // console.log('Forcing Relics conduit usage:', MARKETPLACE_CONDUIT_ADDRESS)
     } else {
       throw new Error('Invalid marketplace specified')
     }

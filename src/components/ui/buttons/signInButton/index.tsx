@@ -50,7 +50,7 @@ const SignInButton = () => {
         verifySignature={verify}
         onSignInSuccess={handleSignInSuccess}
         onSignInError={handleSignInError}
-        message='Grails Market wants you to sign in'
+        message='Relics wants you to sign in'
         onDisconnectedClick={() => openConnectModal?.()}
         darkMode={true}
         isSignedIn={userAddress && authStatus === 'authenticated'}

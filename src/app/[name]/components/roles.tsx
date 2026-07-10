@@ -50,7 +50,7 @@ const Roles: React.FC<NameDetailsProps> = ({
         onClick={() => setIsRolesOpen(!isRolesOpen)}
       >
         <div className='flex items-center gap-2'>
-          <h3 className='font-sedan-sc text-3xl'>Roles</h3>
+          <h3 className='font-display text-3xl'>Roles</h3>
           {canEditRoles && (
             <button
               className='hover:bg-tertiary flex h-7 w-7 items-center justify-center rounded-md transition-colors'

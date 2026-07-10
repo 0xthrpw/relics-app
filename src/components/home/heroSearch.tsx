@@ -21,7 +21,7 @@ const HeroSearch: React.FC = () => {
         onSearch={openSearchModal}
       />
       <PrimaryButton
-        className='font-sedan-sc h-10 w-24 rounded-l-none text-xl font-medium @[40rem]/app:w-28 @[48rem]/app:h-12 @[48rem]/app:w-36 @[48rem]/app:text-2xl'
+        className='font-display h-10 w-24 rounded-l-none text-xl font-medium @[40rem]/app:w-28 @[48rem]/app:h-12 @[48rem]/app:w-36 @[48rem]/app:text-2xl'
         onClick={openSearchModal}
       >
         Search

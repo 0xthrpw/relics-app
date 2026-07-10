@@ -5,19 +5,19 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Bulk Search',
-  description: 'Search for multiple ENS names at once on Grails',
+  description: 'Search for multiple ENS names at once on Relics',
   openGraph: {
-    title: 'Bulk Search | Grails',
-    description: 'Search for multiple ENS names at once on Grails',
+    title: 'Bulk Search | Relics',
+    description: 'Search for multiple ENS names at once on Relics',
     siteName: 'Bulk Search',
-    url: 'https://grails.app/bulk-search',
-    images: [{ url: 'https://grails.app/previews/marketplace.jpeg' }],
+    url: 'https://relics.bid/bulk-search',
+    images: [{ url: 'https://relics.bid/previews/marketplace.jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bulk Search | Grails',
-    description: 'Search for multiple ENS names at once on Grails',
-    images: 'https://grails.app/previews/marketplace.jpeg',
+    title: 'Bulk Search | Relics',
+    description: 'Search for multiple ENS names at once on Relics',
+    images: 'https://relics.bid/previews/marketplace.jpeg',
   },
 }
 
