@@ -187,7 +187,7 @@ export async function GET(req: NextRequest) {
         >
           Profile
         </p>
-        <img alt='avatar' width='188' height='56' src={`${APP_URL}/your-ens-market-logo.svg`} />
+        <img alt='avatar' width='188' height='50' src={`${APP_URL}/your-ens-market-logo.svg`} />
       </div>
     </div>,
     {

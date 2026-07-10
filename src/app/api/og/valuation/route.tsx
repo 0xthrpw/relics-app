@@ -478,7 +478,7 @@ export async function GET(req: NextRequest) {
           gap: 14,
         }}
       >
-        {logoDataUri && <img src={logoDataUri} alt='Relics' width={250} height={66} />}
+        {logoDataUri && <img src={logoDataUri} alt='Relics' width={250} height={64} />}
         <span style={{ fontSize: 30, color: PRIMARY }}>{`relics.bid/${beautified}`}</span>
       </div>
     )

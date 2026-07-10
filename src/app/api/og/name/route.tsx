@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
           />
         )}
         <div style={{ height: 80, width: 2, backgroundColor: '#ffffff' }} />
-        <img src={`${APP_URL}/your-ens-market-logo.svg`} alt='Relics Logo' width={232} height={69} />
+        <img src={`${APP_URL}/your-ens-market-logo.svg`} alt='Relics Logo' width={232} height={62} />
       </div>,
       {
         ...size,

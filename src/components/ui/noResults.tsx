@@ -22,7 +22,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 
   return (
     <div className='flex w-full flex-1 flex-col items-center justify-center gap-4 pt-4' style={{ height: height }}>
-      {!hideIcon && <Image src={Logo} alt='no result' width={100} height={100} />}
+      {!hideIcon && <Image src={Logo} alt='no result' width={100} height={75} />}
       <p className='p-md text-neutral text-lg leading-4'>{label}</p>
       {requiresAuth && authStatus === 'unauthenticated' && <SignInButton />}
     </div>

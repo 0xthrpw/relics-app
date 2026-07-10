@@ -621,7 +621,7 @@ export async function GET(req: NextRequest) {
           ) : (
             <div style={{ display: 'flex', width: 530 }} />
           )}
-          <img src={`${APP_URL}/logo-w-text.svg`} alt='Relics' width={320} height={85} style={{ marginTop: 16 }} />
+          <img src={`${APP_URL}/logo-w-text.svg`} alt='Relics' width={320} height={81} style={{ marginTop: 16 }} />
           <div
             style={{
               fontSize: 44,

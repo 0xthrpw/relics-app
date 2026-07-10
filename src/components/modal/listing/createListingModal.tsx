@@ -538,7 +538,7 @@ const CreateListingModal: React.FC<CreateListingModalProps> = ({ onClose, domain
                   className='p-md hover:bg-secondary flex w-full cursor-pointer items-center justify-between rounded-md transition-colors'
                 >
                   <div className='flex items-center gap-2'>
-                    <Image src={GrailsIcon} alt='Relics' width={24} height={24} />
+                    <Image src={GrailsIcon} alt='Relics' width={24} height={19} className='h-6 w-auto' />
                     <p className='font-display text-2xl'>Relics</p>
                   </div>
                   <FilterSelector

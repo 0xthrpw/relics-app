@@ -396,7 +396,7 @@ export async function GET(req: NextRequest) {
             src={`${APP_URL}/your-ens-market-logo.svg`}
             alt='Relics'
             width={380}
-            height={114}
+            height={102}
             style={{ marginTop: 24 }}
           />
         </div>

@@ -125,7 +125,7 @@ export async function GET(req: NextRequest) {
           gap: 10,
         }}
       >
-        <img alt='avatar' width='190' height='57' src={`${APP_URL}/your-ens-market-logo.svg`} />
+        <img alt='avatar' width='190' height='51' src={`${APP_URL}/your-ens-market-logo.svg`} />
       </div>
     </div>,
     {

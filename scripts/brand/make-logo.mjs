@@ -11,72 +11,111 @@ const cinzel400 = TextToSVG.loadSync(path.join(__dirname, 'cinzel-400.ttf'))
 
 const SCHEMES = {
   patina: {
-    // verdigris body, moon-silver gem
+    // verdigris bronze (goblet + gem), bone (skull)
     BODY_LIGHT: '#9fe8cd',
     BODY: '#4fc3a1',
     BODY_DEEP: '#2c7f68',
-    GEM: '#e9f4ee',
-    GEM_DEEP: '#b9cfc7',
-    FACET: '#1d5a4a',
+    BONE_LIGHT: '#f2f7f1',
+    BONE: '#dde8dd',
+    BONE_DEEP: '#a9bfb4',
+    FACET: '#eafff6',
     INK: '#f0f6f2',
     TAG: '#5fcfae',
   },
 }
 
-const bodyPath = `
-    M22.5 5
-    L41.5 5
-    Q43 5 43 6.5
-    L43 8.5
-    Q43 10 41.5 10
-    L37.8 10
-    C37.8 13 38.4 15.4 41 17.2
-    C47 21.2 50 25.5 50 30.5
-    C50 39.5 43 45 38 46.8
-    L37.6 50
-    L40.5 51.5
-    Q42.5 52.5 42.5 54.5
-    L42.5 55.5
-    Q42.5 57.5 40.5 57.5
-    L23.5 57.5
-    Q21.5 57.5 21.5 55.5
-    L21.5 54.5
-    Q21.5 52.5 23.5 51.5
-    L26.4 50
-    L26 46.8
-    C21 45 14 39.5 14 30.5
-    C14 25.5 17 21.2 23 17.2
-    C25.6 15.4 26.2 13 26.2 10
-    L22.5 10
-    Q21 10 21 8.5
-    L21 6.5
-    Q21 5 22.5 5
-    Z
-    M32 21.5 L40.5 30.5 L32 39.5 L23.5 30.5 Z`
+// ---------------------------------------------------------------- sprites
+// Pixel-art vanitas: big bone skull front, knocked-over goblet behind it.
+// Legend: . transparent / K outline / W bone light / B bone shade /
+//         g verdigris light / G verdigris / D verdigris deep
+const SKULL = [
+  '....KKKKKKKKKK....',
+  '..KKWWWWWWWWBBKK..',
+  '.KWWWWWWWGWWWWBBK.',
+  '.KWWWWWWGgGWWWBBK.',
+  '.KWWWWWGGgGGWWBBK.',
+  '.KWWWWWWGGGWWWBBK.',
+  '.KWWWWWWWGWWWWBBK.',
+  '.KWWWWWWWWWWWWBBK.',
+  '.KWKKKKWWWWKKKKBK.',
+  '.KWKKKKWWWWKKKKBK.',
+  '.KWKKKKWWWWKKKKBK.',
+  '.KWWWWWWWWWWWWBBK.',
+  '.KWWWWWWKKWWWWBBK.',
+  '.KWWWWWKKKKWWWBBK.',
+  '..KWWWWWWWWWWBBK..',
+  '...KWWWWWWWWWBK...',
+  '....KWWWWWWWWK....',
+  '....KWWKWWKWBK....',
+  '....KWWKWWKWBK....',
+  '....KWWKWWKWBK....',
+  '....KKKKKKKKKK....',
+]
 
-function markGroup(C) {
-  return `
-    <path d="M22 11.5 C11.5 13.5 10 24.5 17.5 28.5" fill="none" stroke="url(#au)" stroke-width="2.9" stroke-linecap="round"/>
-    <path d="M42 11.5 C52.5 13.5 54 24.5 46.5 28.5" fill="none" stroke="url(#au)" stroke-width="2.9" stroke-linecap="round"/>
-    <path d="${bodyPath.trim()}" fill="url(#au)" fill-rule="evenodd"/>
-    <path d="M32 23.5 L38.5 30.5 L32 37.5 L25.5 30.5 Z" fill="url(#gem)"/>
-    <path d="M32 26.5 L35.7 30.5 L32 34.5 L28.3 30.5 Z" fill="none" stroke="${C.FACET}" stroke-width="0.8" opacity="0.9"/>
-    <path d="M32 23.5 L32 26.5 M38.5 30.5 L35.7 30.5 M32 37.5 L32 34.5 M25.5 30.5 L28.3 30.5" stroke="${C.FACET}" stroke-width="0.8" opacity="0.9"/>`
+const GOBLET = [
+  '...KKKK.KKKKKKKKK...............',
+  '..KggggKggggggggK...........KK..',
+  '.KDgggKgggggggggK..........KggK.',
+  '.KDggggKggggggggKKKKKKKKKKKKggK.',
+  '.KDgggKgggggggggKGGGGGGGGGGKGGK.',
+  '.KDGGGGKGGGGGGGGKGGGGGGGGGGKGGK.',
+  '.KDGGGKGGGGGGGGGKKKKKKKKKKKKGGK.',
+  '.KDDDDDKDDDDDDDDK..........KGGK.',
+  '.KDDDDKDDDDDDDDDK...........KK..',
+  '..KKKKKKKKKKKKKKK...............',
+]
+
+const SHARD = ['gG.', 'GGD']
+
+function stamp(grid, sprite, ox, oy) {
+  sprite.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      if (row[x] !== '.') grid[oy + y][ox + x] = row[x]
+    }
+  })
 }
 
-function defs(C) {
-  return `
-  <defs>
-    <linearGradient id="au" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${C.BODY_LIGHT}"/>
-      <stop offset="0.55" stop-color="${C.BODY}"/>
-      <stop offset="1" stop-color="${C.BODY_DEEP}"/>
-    </linearGradient>
-    <linearGradient id="gem" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${C.GEM}"/>
-      <stop offset="1" stop-color="${C.GEM_DEEP}"/>
-    </linearGradient>
-  </defs>`
+const SCENE_W = 32
+const SCENE_H = 24
+
+function buildScene() {
+  const grid = Array.from({ length: SCENE_H }, () => Array(SCENE_W).fill('.'))
+  stamp(grid, GOBLET, 0, 12)
+  stamp(grid, SKULL, 7, 3)
+  stamp(grid, SHARD, 4, 22)
+  return grid
+}
+
+function markGroup(C) {
+  const pal = {
+    K: '#16241f',
+    W: C.BONE_LIGHT,
+    B: C.BONE_DEEP,
+    g: C.BODY_LIGHT,
+    G: C.BODY,
+    D: C.BODY_DEEP,
+  }
+  const grid = buildScene()
+  const rects = []
+  for (let y = 0; y < SCENE_H; y++) {
+    let x = 0
+    while (x < SCENE_W) {
+      const c = grid[y][x]
+      if (c === '.') {
+        x++
+        continue
+      }
+      let w = 1
+      while (x + w < SCENE_W && grid[y][x + w] === c) w++
+      rects.push(`<rect x="${x}" y="${y}" width="${w}" height="1" fill="${pal[c]}"/>`)
+      x += w
+    }
+  }
+  return `<g shape-rendering="crispEdges">\n${rects.join('\n')}\n</g>`
+}
+
+function defs() {
+  return ''
 }
 
 const wordmarkD = cinzel.getD('RELICS', { x: 0, y: 0, fontSize: 34, anchor: 'left baseline', letterSpacing: 0.06 })
@@ -89,38 +128,38 @@ const tagD = cinzel400.getD('YOUR ENS MARKET', {
   letterSpacing: 0.18,
 })
 const tagW = Math.ceil(cinzel400.getMetrics('YOUR ENS MARKET', { fontSize: 12.5, letterSpacing: 0.18 }).width)
-const lockupW = Math.max(56 + wmWidth, 57 + tagW)
+const lockupW = Math.max(80 + wmWidth, 81 + tagW)
 
 for (const [key, C] of Object.entries(SCHEMES)) {
   const OUT = path.join(__dirname, 'out')
   fs.mkdirSync(OUT, { recursive: true })
 
-  const logo = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Relics">
-${defs(C)}
+  const logo = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24" width="128" height="96" role="img" aria-label="Relics">
+${defs()}
 ${markGroup(C)}
 </svg>`
   fs.writeFileSync(path.join(OUT, 'logo.svg'), logo)
 
-  const logoWText = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${56 + wmWidth} 48" width="${56 + wmWidth}" height="48" role="img" aria-label="Relics">
-${defs(C)}
-<g transform="translate(0 -6) scale(0.82)">
+  const logoWText = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${64 + wmWidth} 48" width="${64 + wmWidth}" height="48" role="img" aria-label="Relics">
+${defs()}
+<g transform="translate(0.5 2) scale(1.8333)">
 ${markGroup(C)}
 </g>
-<g transform="translate(52 36)">
+<g transform="translate(64 36)">
   <path d="${wordmarkD}" fill="${C.INK}"/>
 </g>
 </svg>`
   fs.writeFileSync(path.join(OUT, 'logo-w-text.svg'), logoWText)
 
   const lockup = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${lockupW} 64" width="${lockupW}" height="64" role="img" aria-label="Relics - Your ENS Market">
-${defs(C)}
-<g transform="translate(0 1) scale(0.97)">
+${defs()}
+<g transform="translate(0.8 4) scale(2.3333)">
 ${markGroup(C)}
 </g>
-<g transform="translate(56 34)">
+<g transform="translate(80 34)">
   <path d="${wordmarkD}" fill="${C.INK}"/>
 </g>
-<g transform="translate(57 52)">
+<g transform="translate(81 52)">
   <path d="${tagD}" fill="${C.TAG}"/>
 </g>
 </svg>`

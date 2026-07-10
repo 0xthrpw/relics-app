@@ -68,7 +68,7 @@ const GlobalThreadView: React.FC = () => {
         </button>
         <div className='flex min-w-0 flex-1 items-center gap-2'>
           <div className='bg-background border-tertiary flex h-9 w-9 shrink-0 items-center justify-center rounded-full border'>
-            <Image src={Logo} alt='Relics' width={24} height={24} className='h-6 w-6' />
+            <Image src={Logo} alt='Relics' width={24} height={19} className='h-6 w-auto' />
           </div>
           <p className='text-foreground truncate text-xl font-semibold'>ENS Global Chat</p>
         </div>
