@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        background: '#191512',
+        background: '#101617',
         textAlign: 'center',
         fontWeight: 700,
         fontFamily: 'Inter',

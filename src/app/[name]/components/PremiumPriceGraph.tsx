@@ -107,8 +107,8 @@ const PremiumPriceGraph: React.FC<PremiumPriceGraphProps> = ({ expiryDate, ethPr
     const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`)
 
     // Primary color from globals.css
-    const primaryColor = '#d9b36a'
-    const primaryColorAlpha = '#d9b36a2f'
+    const primaryColor = '#59cfae'
+    const primaryColorAlpha = '#59cfae2f'
 
     // Scales
     const xScale = d3
@@ -220,8 +220,8 @@ const PremiumPriceGraph: React.FC<PremiumPriceGraphProps> = ({ expiryDate, ethPr
       .attr('fill', 'currentColor')
       .style('font-size', isMobile ? '10px' : '11px')
 
-    g.selectAll('.domain').attr('stroke', '#3a322a')
-    g.selectAll('.tick line').attr('stroke', '#3a322a')
+    g.selectAll('.domain').attr('stroke', '#2d3c3e')
+    g.selectAll('.tick line').attr('stroke', '#2d3c3e')
 
     // Y axis left (USD) - custom tick values to show more detail at lower values
     const usdTickValues = isMobile

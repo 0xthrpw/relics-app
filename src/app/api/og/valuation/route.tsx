@@ -19,13 +19,13 @@ const size = {
 }
 
 // Palette (hardcoded — Satori can't read the app's global CSS variables).
-const PRIMARY = '#d9b36a'
+const PRIMARY = '#59cfae'
 const PRIMARY_RGB = '255,223,192'
 const NEUTRAL_RGB = '170,170,170'
 const FOREGROUND = '#f4f4f4'
-const NEUTRAL = '#a89a88'
-const CARD_BG = '#262019'
-const CARD_BORDER = '#3a322a'
+const NEUTRAL = '#93a8a3'
+const CARD_BG = '#1b2527'
+const CARD_BORDER = '#2d3c3e'
 const PILL_BG = '#3c3c3c'
 const TRACK_BG = 'rgba(255,255,255,0.10)'
 
@@ -451,7 +451,7 @@ export async function GET(req: NextRequest) {
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: 'rgba(255,255,255,0.8)',
-              color: '#191512',
+              color: '#101617',
               fontSize: 18,
               fontWeight: 700,
               textTransform: 'uppercase',
@@ -518,7 +518,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #3a322a, #191512)',
+          background: 'radial-gradient(circle, #2d3c3e, #101617)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

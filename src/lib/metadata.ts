@@ -5,7 +5,7 @@ export const metadataBaseUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http
 export const metadataTitle = 'Relics: ENS Manager & Market'
 export const metadataSiteName = 'Relics'
 export const metadataDescription = 'Your ENS Market. Find, sell, buy, and manage your ENS names on Relics.'
-export const metadataThemeColor = '#d9b36a'
+export const metadataThemeColor = '#59cfae'
 
 // Relative URLs: icons resolve against the page origin in the browser, and
 // og/twitter images are absolutized by Next via metadataBase — so every asset

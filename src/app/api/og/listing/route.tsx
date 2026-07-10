@@ -228,7 +228,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #3a322a, #191512)',
+          background: 'radial-gradient(circle, #2d3c3e, #101617)',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -256,8 +256,8 @@ export async function GET(req: NextRequest) {
               height: 96,
               fontSize: 60,
               fontWeight: 700,
-              color: '#191512',
-              backgroundColor: '#d9b36a',
+              color: '#101617',
+              backgroundColor: '#59cfae',
               textTransform: 'uppercase',
               letterSpacing: 1,
               borderRadius: '20px 20px 0px 0px',
@@ -290,7 +290,7 @@ export async function GET(req: NextRequest) {
                 width: 560,
                 gap: 24,
                 overflow: 'hidden',
-                backgroundColor: '#3a322a',
+                backgroundColor: '#2d3c3e',
                 borderRadius: '0px 0px 20px 20px',
                 padding: categories.length === 1 ? '16px' : '10px',
               }}
@@ -345,7 +345,7 @@ export async function GET(req: NextRequest) {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-            <div style={{ fontSize: 96, fontWeight: 700, color: '#d9b36a' }}>{`${price} ${currency}`}</div>
+            <div style={{ fontSize: 96, fontWeight: 700, color: '#59cfae' }}>{`${price} ${currency}`}</div>
             <img src={sourceLogo} alt='source' width={72} height={72} />
           </div>
           <div style={{ fontSize: 48, color: '#cccccc' }}>{`Ends: ${expiresFormatted}`}</div>
@@ -383,7 +383,7 @@ export async function GET(req: NextRequest) {
           <div
             style={{
               fontSize: 44,
-              color: '#d9b36a',
+              color: '#59cfae',
               maxWidth: 700,
               overflow: 'hidden',
               textOverflow: 'ellipsis',

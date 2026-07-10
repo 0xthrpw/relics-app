@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUT = path.join(__dirname, 'out')
 const REPO = '/home/throw/work/nomentum/relics-app'
 const PUB = path.join(REPO, 'public')
-const BG = '#191512'
+const BG = '#101617'
 
 const logoSvg = fs.readFileSync(path.join(OUT, 'logo.svg'), 'utf8')
 const logoWTextSvg = fs.readFileSync(path.join(OUT, 'logo-w-text.svg'), 'utf8')

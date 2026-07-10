@@ -56,7 +56,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #3a322a, #191512)',
+          background: 'radial-gradient(circle, #2d3c3e, #101617)',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',

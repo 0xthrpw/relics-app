@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #191512;
-  --foreground: #f4efe6;
-  --primary: #d9b36a;
-  --secondary: #262019;
-  --tertiary: #3a322a;
-  --neutral: #a89a88;
-  --premium: #5fe08d;
+  --background: #101617;
+  --foreground: #f0f6f2;
+  --primary: #59cfae;
+  --secondary: #1b2527;
+  --tertiary: #2d3c3e;
+  --neutral: #93a8a3;
+  --premium: #e8c15c;
   --grace: #ee9235;
   --available: #4cc3ff;
   --max-width-domain-panel: 1700px;
@@ -35,20 +35,20 @@
   --font-size-8xl: 64px;
   --font-size-9xl: 68px;
   --font-size-10xl: 80px;
-  --shadow-color: #c9a96833;
+  --shadow-color: #4fc3a133;
   --shadow-small: 1px 1px 2px 0px var(--shadow-color);
   --shadow-medium: 2px 2px 4px 0px var(--shadow-color);
   --shadow-large: 4px 4px 8px 0px var(--shadow-color);
   --shadow-xl: 4px 8px 16px 0px var(--shadow-color);
-  --shadow-bulk: 0 0 20px -6px #d9b36abb;
-  --shadow-footer: 0 -4px 40px 4px #d9b36a;
-  --shadow-homeCard: -2px 0 12px 0 #0d0a07aa;
+  --shadow-bulk: 0 0 20px -6px #59cfaebb;
+  --shadow-footer: 0 -4px 40px 4px #59cfae;
+  --shadow-homeCard: -2px 0 12px 0 #070b0baa;
 
   /* Custom Ethereum Identity Kit colors */
-  --ethereum-identity-kit-sign-in-button: #d9b36a;
-  --ethereum-identity-kit-sign-in-button-dark: #d9b36a;
-  --ethereum-identity-kit-sign-in-button-hover: #c39c52;
-  --ethereum-identity-kit-sign-in-button-hover-dark: #c39c52;
+  --ethereum-identity-kit-sign-in-button: #59cfae;
+  --ethereum-identity-kit-sign-in-button-dark: #59cfae;
+  --ethereum-identity-kit-sign-in-button-hover: #47b795;
+  --ethereum-identity-kit-sign-in-button-hover-dark: #47b795;
 }
 
 @theme inline {
@@ -162,7 +162,7 @@ body {
 }
 
 .background-radial-primary {
-  background: radial-gradient(circle at center, #d9b36a29 0%, transparent 75%);
+  background: radial-gradient(circle at center, #59cfae29 0%, transparent 75%);
   pointer-events: none;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 .gradient-gray {
-  background: linear-gradient(135deg, rgba(152, 140, 120, 0.7) 0%, rgba(152, 140, 120, 0.05) 103.11%);
+  background: linear-gradient(135deg, rgba(126, 148, 142, 0.7) 0%, rgba(126, 148, 142, 0.05) 103.11%);
 }
 
 /* .user-profile {

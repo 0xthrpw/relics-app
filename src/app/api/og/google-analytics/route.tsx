@@ -113,12 +113,12 @@ function TrendChart({
             y2={margin.top}
             gradientUnits='userSpaceOnUse'
           >
-            <stop offset='0%' stopColor='#d9b36a' stopOpacity={0.02} />
-            <stop offset='100%' stopColor='#d9b36a' stopOpacity={fillOpacity} />
+            <stop offset='0%' stopColor='#59cfae' stopOpacity={0.02} />
+            <stop offset='100%' stopColor='#59cfae' stopOpacity={fillOpacity} />
           </linearGradient>
         </defs>
         <path d={areaPath} fill='url(#chartGrad)' />
-        <path d={linePath} fill='none' stroke='#d9b36a' strokeOpacity={strokeOpacity} strokeWidth={2} />
+        <path d={linePath} fill='none' stroke='#59cfae' strokeOpacity={strokeOpacity} strokeWidth={2} />
         {yearDividers.map((d, i) => (
           <line
             key={i}
@@ -230,7 +230,7 @@ function StatCard({
             width: innerWidth,
             borderRadius: 4,
             opacity: fillOpacity,
-            background: 'linear-gradient(to right, #999, #d9b36a)',
+            background: 'linear-gradient(to right, #999, #59cfae)',
           }}
         />
       </div>
@@ -401,7 +401,7 @@ export async function GET(req: NextRequest) {
         style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #3a322a, #191512)',
+          background: 'radial-gradient(circle, #2d3c3e, #101617)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -423,7 +423,7 @@ export async function GET(req: NextRequest) {
             gap: 36,
             borderRadius: 20,
             overflow: 'hidden',
-            backgroundColor: '#3a322a',
+            backgroundColor: '#2d3c3e',
           }}
         >
           <div
@@ -459,7 +459,7 @@ export async function GET(req: NextRequest) {
                   width: 480,
                   gap: 16,
                   overflow: 'hidden',
-                  backgroundColor: '#262019',
+                  backgroundColor: '#1b2527',
                   borderRadius: '0px 0px 0px 20px',
                   padding: categories.length === 1 ? 16 : 10,
                 }}
@@ -625,7 +625,7 @@ export async function GET(req: NextRequest) {
           <div
             style={{
               fontSize: 44,
-              color: '#d9b36a',
+              color: '#59cfae',
               width: 530,
               display: 'flex',
               textAlign: 'right',
